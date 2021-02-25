@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Models\CorrelationFilter;
+use AzureServiceBus\ServiceBus\Models\CorrelationFilter;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,7 +44,7 @@ use PHPUnit\Framework\TestCase;
 class CorrelationFilterTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\CorrelationFilter::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\CorrelationFilter::__construct
      */
     public function testCorrelationFilterConstructor()
     {
@@ -58,8 +58,8 @@ class CorrelationFilterTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\CorrelationFilter::getCorrelationId
-     * @covers \WindowsAzure\ServiceBus\Models\CorrelationFilter::setCorrelationId
+     * @covers \AzureServiceBus\ServiceBus\Models\CorrelationFilter::getCorrelationId
+     * @covers \AzureServiceBus\ServiceBus\Models\CorrelationFilter::setCorrelationId
      */
     public function testGetSetCorrelationId()
     {

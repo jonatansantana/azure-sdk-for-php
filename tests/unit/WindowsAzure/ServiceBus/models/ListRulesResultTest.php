@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Models\ListRulesResult;
+use AzureServiceBus\ServiceBus\Models\ListRulesResult;
 
 use PHPUnit\Framework\TestCase;
 
@@ -45,7 +45,7 @@ use PHPUnit\Framework\TestCase;
 class ListRulesResultTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\ListRulesResult::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\ListRulesResult::__construct
      */
     public function testListRulesResultConstructor()
     {

@@ -23,12 +23,12 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Internal\Action;
-use WindowsAzure\ServiceBus\Internal\Filter;
-use WindowsAzure\ServiceBus\Models\RuleDescription;
-use WindowsAzure\ServiceBus\Models\RuleInfo;
+use AzureServiceBus\ServiceBus\Internal\Action;
+use AzureServiceBus\ServiceBus\Internal\Filter;
+use AzureServiceBus\ServiceBus\Models\RuleDescription;
+use AzureServiceBus\ServiceBus\Models\RuleInfo;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -47,7 +47,7 @@ use PHPUnit\Framework\TestCase;
 class RuleInfoTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\RuleInfo::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleInfo::__construct
      */
     public function testRuleInfoConstructor()
     {
@@ -67,8 +67,8 @@ class RuleInfoTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\RuleInfo::getRuleDescription
-     * @covers \WindowsAzure\ServiceBus\Models\RuleInfo::setRuleDescription
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleInfo::getRuleDescription
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleInfo::setRuleDescription
      */
     public function testGetSetRuleDescription()
     {
@@ -88,8 +88,8 @@ class RuleInfoTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\RuleInfo::getFilter
-     * @covers \WindowsAzure\ServiceBus\Models\RuleInfo::setFilter
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleInfo::getFilter
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleInfo::setFilter
      */
     public function testGetSetFilter()
     {
@@ -109,8 +109,8 @@ class RuleInfoTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\RuleInfo::getAction
-     * @covers \WindowsAzure\ServiceBus\Models\RuleInfo::setAction
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleInfo::getAction
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleInfo::setAction
      */
     public function testGetSetAction()
     {
@@ -130,8 +130,8 @@ class RuleInfoTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\RuleInfo::getName
-     * @covers \WindowsAzure\ServiceBus\Models\RuleInfo::setName
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleInfo::getName
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleInfo::setName
      */
     public function testGetSetName()
     {

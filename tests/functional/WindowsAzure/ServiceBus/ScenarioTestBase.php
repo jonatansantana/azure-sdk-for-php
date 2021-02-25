@@ -23,12 +23,12 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\functional\WindowsAzure\ServiceBus;
+namespace Tests\functional\AzureServiceBus\ServiceBus;
 
 
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\ServiceBus\Models\BrokeredMessage;
+use AzureServiceBus\Common\Internal\Utilities;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\ServiceBus\Models\BrokeredMessage;
 
 class ScenarioTestBase extends IntegrationTestBase
 {

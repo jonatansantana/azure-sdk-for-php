@@ -23,7 +23,7 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Serialization;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Serialization;
 
 /**
  * Dummy class for Xml Serializer. 

@@ -23,11 +23,11 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common;
+namespace AzureServiceBus\Common;
 
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Validate;
-use WindowsAzure\Common\Internal\ConnectionStringSource;
+use AzureServiceBus\Common\Internal\Utilities;
+use AzureServiceBus\Common\Internal\Validate;
+use AzureServiceBus\Common\Internal\ConnectionStringSource;
 
 /**
  * Configuration manager for accessing Windows Azure settings.
@@ -128,7 +128,7 @@ class CloudConfigurationManager
         $provider = Utilities::tryGetValue($default, $name, $provider);
 
         Validate::notNullOrEmpty($provider, 'callback');
-
+echo 'merging arrays ccm'.\PHP_EOL;
         if ($prepend) {
             self::$_sources = array_merge(
                 [$name => $provider],

@@ -23,9 +23,9 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal;
+namespace AzureServiceBus\Common\Internal;
 
-use WindowsAzure\Common\Internal\Http\IHttpClient;
+use AzureServiceBus\Common\Internal\Http\IHttpClient;
 use Psr\Http\Message\ResponseInterface;
 
 /**

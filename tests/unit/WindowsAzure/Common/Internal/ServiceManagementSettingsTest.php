@@ -23,10 +23,10 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal;
+namespace Tests\unit\AzureServiceBus\Common\Internal;
 
-use WindowsAzure\Common\Internal\ServiceManagementSettings;
-use WindowsAzure\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\ServiceManagementSettings;
+use AzureServiceBus\Common\Internal\Resources;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,25 +44,25 @@ use PHPUnit\Framework\TestCase;
  */
 class ServiceManagementSettingsTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
-        $property = new \ReflectionProperty('WindowsAzure\Common\Internal\ServiceManagementSettings', 'isInitialized');
+        $property = new \ReflectionProperty('AzureServiceBus\Common\Internal\ServiceManagementSettings', 'isInitialized');
         $property->setAccessible(true);
         $property->setValue(false);
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::createFromConnectionString
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::init
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::__construct
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::getValidator
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::optional
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::allRequired
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::setting
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::settingWithFunc
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::matchedSpecification
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::parseAndValidateKeys
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::noMatch
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::createFromConnectionString
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::init
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::__construct
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::getValidator
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::optional
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::allRequired
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::setting
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::settingWithFunc
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::matchedSpecification
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::parseAndValidateKeys
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::noMatch
      */
     public function testCreateFromConnectionStringWithAutomaticCase()
     {
@@ -82,17 +82,17 @@ class ServiceManagementSettingsTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::createFromConnectionString
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::init
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::__construct
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::getValidator
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::optional
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::allRequired
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::setting
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::settingWithFunc
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::matchedSpecification
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::parseAndValidateKeys
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::noMatch
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::createFromConnectionString
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::init
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::__construct
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::getValidator
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::optional
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::allRequired
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::setting
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::settingWithFunc
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::matchedSpecification
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::parseAndValidateKeys
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::noMatch
      */
     public function testCreateFromConnectionStringWithExplicitCase()
     {
@@ -112,31 +112,31 @@ class ServiceManagementSettingsTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::createFromConnectionString
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::init
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::__construct
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::getValidator
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::optional
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::allRequired
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::setting
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::settingWithFunc
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::matchedSpecification
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::parseAndValidateKeys
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::noMatch
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::createFromConnectionString
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::init
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::__construct
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::getValidator
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::optional
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::allRequired
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::setting
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::settingWithFunc
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::matchedSpecification
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::parseAndValidateKeys
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::noMatch
      */
     public function testCreateFromConnectionStringWithMissingKeyFail()
     {
         // Setup
         $connectionString = "CertificatePath=C:\path_to_my_cert.pem;ServiceManagementEndpoint=http://myprivatedns.com";
         $expectedMsg = sprintf(Resources::MISSING_CONNECTION_STRING_SETTINGS, $connectionString);
-        $this->setExpectedException('\RuntimeException', $expectedMsg);
+        $this->expectException('\RuntimeException', $expectedMsg);
 
         // Test
         ServiceManagementSettings::createFromConnectionString($connectionString);
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::getSubscriptionId
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::getSubscriptionId
      */
     public function testGetSubscriptionId()
     {
@@ -152,7 +152,7 @@ class ServiceManagementSettingsTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::getEndpointUri
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::getEndpointUri
      */
     public function testGetEndpointUri()
     {
@@ -168,7 +168,7 @@ class ServiceManagementSettingsTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::getCertificatePath
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::getCertificatePath
      */
     public function testGetCertificatePath()
     {
@@ -184,17 +184,17 @@ class ServiceManagementSettingsTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::createFromConnectionString
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::init
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::__construct
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::getValidator
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::optional
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::allRequired
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::setting
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::settingWithFunc
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::matchedSpecification
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::parseAndValidateKeys
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::noMatch
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::createFromConnectionString
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::init
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::__construct
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::getValidator
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::optional
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::allRequired
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::setting
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::settingWithFunc
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::matchedSpecification
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::parseAndValidateKeys
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::noMatch
      */
     public function testCreateFromConnectionStringWithInvalidServiceManagementKeyFail()
     {
@@ -206,24 +206,24 @@ class ServiceManagementSettingsTest extends TestCase
             $invalidKey,
             implode("\n", ['SubscriptionID', 'CertificatePath', 'ServiceManagementEndpoint'])
         );
-        $this->setExpectedException('\RuntimeException', $expectedMsg);
+        $this->expectException('\RuntimeException', $expectedMsg);
 
         // Test
         ServiceManagementSettings::createFromConnectionString($connectionString);
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::createFromConnectionString
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::init
-     * @covers \WindowsAzure\Common\Internal\ServiceManagementSettings::__construct
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::getValidator
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::optional
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::allRequired
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::setting
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::settingWithFunc
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::matchedSpecification
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::parseAndValidateKeys
-     * @covers \WindowsAzure\Common\Internal\ServiceSettings::noMatch
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::createFromConnectionString
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::init
+     * @covers \AzureServiceBus\Common\Internal\ServiceManagementSettings::__construct
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::getValidator
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::optional
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::allRequired
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::setting
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::settingWithFunc
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::matchedSpecification
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::parseAndValidateKeys
+     * @covers \AzureServiceBus\Common\Internal\ServiceSettings::noMatch
      */
     public function testCreateFromConnectionStringWithCaseInsensitive()
     {

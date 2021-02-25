@@ -22,11 +22,11 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\ServiceBus\Internal;
+namespace AzureServiceBus\ServiceBus\Internal;
 
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\ServiceBus\Models\FalseFilter;
-use WindowsAzure\ServiceBus\Models\TrueFilter;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\ServiceBus\Models\FalseFilter;
+use AzureServiceBus\ServiceBus\Models\TrueFilter;
 
 /**
  * The base class for rule filter.

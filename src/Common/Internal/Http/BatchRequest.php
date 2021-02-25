@@ -23,11 +23,11 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Http;
+namespace AzureServiceBus\Common\Internal\Http;
 
 use Mail_mimePart;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Utilities;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Utilities;
 
 /**
  * Batch request marshaller.

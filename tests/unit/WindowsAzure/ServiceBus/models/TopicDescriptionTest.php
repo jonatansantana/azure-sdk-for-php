@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Models\TopicDescription;
+use AzureServiceBus\ServiceBus\Models\TopicDescription;
 
 use PHPUnit\Framework\TestCase;
 
@@ -45,7 +45,7 @@ use PHPUnit\Framework\TestCase;
 class TopicDescriptionTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\TopicDescription::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicDescription::__construct
      */
     public function testTopicDescriptionConstructor()
     {
@@ -59,8 +59,8 @@ class TopicDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\TopicDescription::getDefaultMessageTimeToLive
-     * @covers \WindowsAzure\ServiceBus\Models\TopicDescription::setDefaultMessageTimeToLive
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicDescription::getDefaultMessageTimeToLive
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicDescription::setDefaultMessageTimeToLive
      */
     public function testGetSetDefaultMessageTimeToLive()
     {
@@ -80,8 +80,8 @@ class TopicDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\TopicDescription::getMaxSizeInMegabytes
-     * @covers \WindowsAzure\ServiceBus\Models\TopicDescription::setMaxSizeInMegabytes
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicDescription::getMaxSizeInMegabytes
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicDescription::setMaxSizeInMegabytes
      */
     public function testGetSetMaxSizeInMegabytes()
     {
@@ -101,8 +101,8 @@ class TopicDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\TopicDescription::getRequiresDuplicateDetection
-     * @covers \WindowsAzure\ServiceBus\Models\TopicDescription::setRequiresDuplicateDetection
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicDescription::getRequiresDuplicateDetection
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicDescription::setRequiresDuplicateDetection
      */
     public function testGetSetRequiresDuplicateDetection()
     {
@@ -122,8 +122,8 @@ class TopicDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\TopicDescription::getDuplicateDetectionHistoryTimeWindow
-     * @covers \WindowsAzure\ServiceBus\Models\TopicDescription::setDuplicateDetectionHistoryTimeWindow
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicDescription::getDuplicateDetectionHistoryTimeWindow
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicDescription::setDuplicateDetectionHistoryTimeWindow
      */
     public function testGetSetDuplicateDetectionHistoryTimeWindow()
     {
@@ -143,8 +143,8 @@ class TopicDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\TopicDescription::getEnableBatchedOperations
-     * @covers \WindowsAzure\ServiceBus\Models\TopicDescription::setEnableBatchedOperations
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicDescription::getEnableBatchedOperations
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicDescription::setEnableBatchedOperations
      */
     public function testGetSetEnableBatchedOperations()
     {
@@ -164,8 +164,8 @@ class TopicDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\TopicDescription::getSizeInBytes
-     * @covers \WindowsAzure\ServiceBus\Models\TopicDescription::setSizeInBytes
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicDescription::getSizeInBytes
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicDescription::setSizeInBytes
      */
     public function testGetSetSizeInBytes()
     {

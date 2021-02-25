@@ -7,7 +7,6 @@
   <testsuites>
     <testsuite name="azure-sdk-for-php">
       <directory suffix="Test.php">tests/unit/</directory>
-      <exclude>tests/unit/WindowsAzure/MediaServices/MediaServicesRestProxyTest.php</exclude>
     </testsuite>
   </testsuites>
 

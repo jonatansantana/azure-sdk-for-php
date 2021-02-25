@@ -23,10 +23,10 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Atom;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Atom;
 
 
-use WindowsAzure\Common\Internal\Atom\AtomLink;
+use AzureServiceBus\Common\Internal\Atom\AtomLink;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -58,8 +58,8 @@ class AtomLinkTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::getUndefinedContent
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::setUndefinedContent
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::getUndefinedContent
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::setUndefinedContent
      */
     public function testGetSetUndefinedContent()
     {
@@ -79,8 +79,8 @@ class AtomLinkTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::getHref
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::setHref
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::getHref
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::setHref
      */
     public function testGetSetHref()
     {
@@ -100,8 +100,8 @@ class AtomLinkTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::getRel
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::setRel
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::getRel
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::setRel
      */
     public function testGetSetRel()
     {
@@ -121,8 +121,8 @@ class AtomLinkTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::getType
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::setType
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::getType
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::setType
      */
     public function testGetSetType()
     {
@@ -142,8 +142,8 @@ class AtomLinkTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::getHreflang
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::setHreflang
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::getHreflang
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::setHreflang
      */
     public function testGetSetHreflang()
     {
@@ -163,8 +163,8 @@ class AtomLinkTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::getTitle
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::setTitle
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::getTitle
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::setTitle
      */
     public function testGetSetTitle()
     {
@@ -184,8 +184,8 @@ class AtomLinkTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::getLength
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::setLength
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::getLength
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::setLength
      */
     public function testGetSetLength()
     {
@@ -205,7 +205,7 @@ class AtomLinkTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::parseXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::parseXml
      */
     public function testParseXmlSuccess()
     {
@@ -226,22 +226,7 @@ class AtomLinkTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::parseXml
-     */
-    public function testParseXmlInvalidArgument()
-    {
-        // Setup
-        $this->setExpectedException(get_class(new \InvalidArgumentException()));
-        $atomLink = new AtomLink();
-
-        // Test
-        $atomLink->parseXml(null);
-
-        // Assert
-    }
-
-    /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\AtomLink::writeXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\AtomLink::writeXml
      */
     public function testWriteXmlSuccess()
     {

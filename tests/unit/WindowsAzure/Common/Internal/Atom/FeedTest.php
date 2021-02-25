@@ -23,15 +23,15 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Atom;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Atom;
 
-use WindowsAzure\Common\Internal\Atom\Feed;
-use WindowsAzure\Common\Internal\Atom\Entry;
+use AzureServiceBus\Common\Internal\Atom\Feed;
+use AzureServiceBus\Common\Internal\Atom\Entry;
 
-use WindowsAzure\Common\Internal\Atom\Category;
-use WindowsAzure\Common\Internal\Atom\Person;
-use WindowsAzure\Common\Internal\Atom\Generator;
-use WindowsAzure\Common\Internal\Atom\AtomLink;
+use AzureServiceBus\Common\Internal\Atom\Category;
+use AzureServiceBus\Common\Internal\Atom\Person;
+use AzureServiceBus\Common\Internal\Atom\Generator;
+use AzureServiceBus\Common\Internal\Atom\AtomLink;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -50,7 +50,7 @@ use PHPUnit\Framework\TestCase;
 class FeedTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::__construct
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::__construct
      */
     public function testFeedConstructor()
     {
@@ -64,8 +64,8 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::getAttributes
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::setAttributes
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::getAttributes
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::setAttributes
      */
     public function testGetSetAttributes()
     {
@@ -86,8 +86,8 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::getEntry
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::setEntry
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::getEntry
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::setEntry
      */
     public function testGetSetEntry()
     {
@@ -107,8 +107,8 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::getCategory
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::setCategory
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::getCategory
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::setCategory
      */
     public function testGetSetCategory()
     {
@@ -129,8 +129,8 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::getContributor
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::setContributor
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::getContributor
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::setContributor
      */
     public function testGetSetContributor()
     {
@@ -151,8 +151,8 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::getGenerator
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::setGenerator
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::getGenerator
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::setGenerator
      */
     public function testGetSetGenerator()
     {
@@ -172,8 +172,8 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::getIcon
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::setIcon
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::getIcon
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::setIcon
      */
     public function testGetSetIcon()
     {
@@ -193,8 +193,8 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::getId
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::setId
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::getId
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::setId
      */
     public function testGetSetId()
     {
@@ -214,8 +214,8 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::getLink
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::setLink
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::getLink
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::setLink
      */
     public function testGetSetLink()
     {
@@ -236,8 +236,8 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::getLogo
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::setLogo
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::getLogo
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::setLogo
      */
     public function testGetSetLogo()
     {
@@ -257,8 +257,8 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::getRights
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::setRights
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::getRights
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::setRights
      */
     public function testGetSetRights()
     {
@@ -278,8 +278,8 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::getSubtitle
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::setSubtitle
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::getSubtitle
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::setSubtitle
      */
     public function testGetSetSubtitle()
     {
@@ -299,8 +299,8 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::getTitle
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::setTitle
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::getTitle
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::setTitle
      */
     public function testGetSetTitle()
     {
@@ -320,8 +320,8 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::getUpdated
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::setUpdated
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::getUpdated
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::setUpdated
      */
     public function testGetSetUpdated()
     {
@@ -341,8 +341,8 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::getExtensionElement
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::setExtensionElement
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::getExtensionElement
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::setExtensionElement
      */
     public function testGetSetExtensionElement()
     {
@@ -362,7 +362,7 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::writeXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::writeXml
      */
     public function testWriteXmlWorks()
     {
@@ -384,7 +384,7 @@ class FeedTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::writeXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::writeXml
      */
     public function testWriteXmlWorksWithNamespace()
     {
@@ -406,7 +406,7 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::parseXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::parseXml
      */
     public function testParseXmlSuccess()
     {
@@ -426,7 +426,7 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::parseXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::parseXml
      */
     public function testFeedParseXmlMultipleLinks()
     {
@@ -455,7 +455,7 @@ class FeedTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Feed::parseXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Feed::parseXml
      */
     public function testFeedParseXmlAllProperties()
     {

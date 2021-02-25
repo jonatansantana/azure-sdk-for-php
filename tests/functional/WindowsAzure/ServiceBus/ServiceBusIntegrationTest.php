@@ -23,32 +23,32 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Functional\WindowsAzure\ServiceBus;
+namespace Tests\Functional\AzureServiceBus\ServiceBus;
 
 use Psr\Http\Message\ResponseInterface;
-use WindowsAzure\Common\Internal\Http\IHttpClient;
-use WindowsAzure\Common\ServiceException;
-use WindowsAzure\Common\Internal\IServiceFilter;
-use WindowsAzure\ServiceBus\Models\BrokeredMessage;
-use WindowsAzure\ServiceBus\Models\CorrelationFilter;
-use WindowsAzure\ServiceBus\Models\EmptyRuleAction;
-use WindowsAzure\ServiceBus\Models\FalseFilter;
-use WindowsAzure\ServiceBus\Models\QueueDescription;
-use WindowsAzure\ServiceBus\Models\QueueInfo;
-use WindowsAzure\ServiceBus\Models\ReceiveMessageOptions;
-use WindowsAzure\ServiceBus\Models\RuleInfo;
-use WindowsAzure\ServiceBus\Models\SqlFilter;
-use WindowsAzure\ServiceBus\Models\SqlRuleAction;
-use WindowsAzure\ServiceBus\Models\SubscriptionInfo;
-use WindowsAzure\ServiceBus\Models\TopicInfo;
-use WindowsAzure\ServiceBus\Models\TrueFilter;
+use AzureServiceBus\Common\Internal\Http\IHttpClient;
+use AzureServiceBus\Common\ServiceException;
+use AzureServiceBus\Common\Internal\IServiceFilter;
+use AzureServiceBus\ServiceBus\Models\BrokeredMessage;
+use AzureServiceBus\ServiceBus\Models\CorrelationFilter;
+use AzureServiceBus\ServiceBus\Models\EmptyRuleAction;
+use AzureServiceBus\ServiceBus\Models\FalseFilter;
+use AzureServiceBus\ServiceBus\Models\QueueDescription;
+use AzureServiceBus\ServiceBus\Models\QueueInfo;
+use AzureServiceBus\ServiceBus\Models\ReceiveMessageOptions;
+use AzureServiceBus\ServiceBus\Models\RuleInfo;
+use AzureServiceBus\ServiceBus\Models\SqlFilter;
+use AzureServiceBus\ServiceBus\Models\SqlRuleAction;
+use AzureServiceBus\ServiceBus\Models\SubscriptionInfo;
+use AzureServiceBus\ServiceBus\Models\TopicInfo;
+use AzureServiceBus\ServiceBus\Models\TrueFilter;
 
 class ServiceBusIntegrationTest extends IntegrationTestBase
 {
     private $RECEIVE_AND_DELETE_5_SECONDS;
     private $PEEK_LOCK_5_SECONDS;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->RECEIVE_AND_DELETE_5_SECONDS = new ReceiveMessageOptions();
@@ -70,8 +70,8 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
 //    }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::getQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::listQueues
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::getQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::listQueues
      */
     public function testFetchQueueAndListQueuesWorks()
     {
@@ -87,7 +87,7 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createQueue
      */
     public function testCreateQueueWorks()
     {
@@ -108,8 +108,8 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::deleteQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::deleteQueue
      */
     public function testDeleteQueueWorks()
     {
@@ -129,7 +129,7 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::sendQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::sendQueueMessage
      */
     public function testSendMessageWorks()
     {
@@ -144,9 +144,9 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::sendQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::sendQueueMessage
      */
     public function testReceiveMessageWorks()
     {
@@ -166,9 +166,9 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::sendQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::sendQueueMessage
      */
     public function testPeekLockMessageWorks()
     {
@@ -188,10 +188,10 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::deleteMessage
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::sendQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::deleteMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::sendQueueMessage
      */
     public function testPeekLockedMessageCanBeCompleted()
     {
@@ -215,10 +215,10 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::sendQueueMessage
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::unlockMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::sendQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::unlockMessage
      */
     public function testPeekLockedMessageCanBeUnlocked()
     {
@@ -243,10 +243,10 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::deleteMessage
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::sendQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::deleteMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::sendQueueMessage
      */
     public function testPeekLockedMessageCanBeDeleted()
     {
@@ -270,9 +270,9 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::sendQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::sendQueueMessage
      */
     public function testContentTypePassesThrough()
     {
@@ -293,10 +293,10 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createTopic
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::deleteTopic
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::getTopic
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::listTopics
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createTopic
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::deleteTopic
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::getTopic
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::listTopics
      */
     public function testTopicCanBeCreatedListedFetchedAndDeleted()
     {
@@ -322,8 +322,8 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::withFilter
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::withFilter
      */
     public function testFilterCanSeeAndChangeRequestOrResponse()
     {
@@ -342,8 +342,8 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createSubscription
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createTopic
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createSubscription
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createTopic
      */
     public function testSubscriptionsCanBeCreatedOnTopics()
     {
@@ -360,9 +360,9 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createSubscription
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createTopic
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::listSubscriptions
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createSubscription
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createTopic
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::listSubscriptions
      */
     public function testSubscriptionsCanBeListed()
     {
@@ -382,9 +382,9 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createSubscription
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createTopic
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::getSubscription
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createSubscription
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createTopic
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::getSubscription
      */
     public function testSubscriptionsDetailsMayBeFetched()
     {
@@ -402,10 +402,10 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createSubscription
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createTopic
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::deleteSubscription
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::listSubscriptions
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createSubscription
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createTopic
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::deleteSubscription
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::listSubscriptions
      */
     public function testSubscriptionsMayBeDeleted()
     {
@@ -427,10 +427,10 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createSubscription
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createTopic
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::receiveSubscriptionMessage
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::sendTopicMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createSubscription
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createTopic
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::receiveSubscriptionMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::sendTopicMessage
      */
     public function testSubscriptionWillReceiveMessage()
     {
@@ -454,9 +454,9 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createRule
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createSubscription
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createTopic
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createRule
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createSubscription
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createTopic
      */
     public function testRulesCanBeCreatedOnSubscriptions()
     {
@@ -474,10 +474,10 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createRule
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createSubscription
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createTopic
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::listRules
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createRule
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createSubscription
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createTopic
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::listRules
      */
     public function testRulesCanBeListedAndDefaultRuleIsPrecreated()
     {
@@ -509,9 +509,9 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createSubscription
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createTopic
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::getRule
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createSubscription
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createTopic
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::getRule
      */
     public function testRuleDetailsMayBeFetched()
     {
@@ -529,11 +529,11 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createRule
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createSubscription
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createTopic
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::deleteRule
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::listRules
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createRule
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createSubscription
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createTopic
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::deleteRule
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::listRules
      */
     public function testRulesMayBeDeleted()
     {
@@ -558,9 +558,9 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createRule
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createSubscription
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createTopic
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createRule
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createSubscription
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createTopic
      */
     public function testRulesMayHaveActionAndFilter()
     {
@@ -617,9 +617,9 @@ class ServiceBusIntegrationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::sendQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::sendQueueMessage
      */
     public function testMessagesMayHaveCustomProperties()
     {

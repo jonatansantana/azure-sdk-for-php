@@ -23,10 +23,10 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Authentication;
+namespace AzureServiceBus\Common\Internal\Authentication;
 
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Utilities;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Utilities;
 
 /**
  * Provides shared key authentication scheme for blob and queue. For more info

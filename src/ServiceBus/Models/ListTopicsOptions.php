@@ -22,7 +22,7 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\ServiceBus\Models;
+namespace AzureServiceBus\ServiceBus\Models;
 
 /**
  * This class contains the options for list topics request.

@@ -22,7 +22,7 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\ServiceBus\Models;
+namespace AzureServiceBus\ServiceBus\Models;
 
 /**
  * The mode of receiving message from Service Bus.

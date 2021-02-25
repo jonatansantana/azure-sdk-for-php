@@ -23,15 +23,14 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal;
+namespace Tests\unit\AzureServiceBus\Common\Internal;
 
-use Tests\Mock\WindowsAzure\Common\Internal\Filters\SimpleFilterMock;
-use MicrosoftAzure\Storage\Blob\Models\AccessCondition;
-use WindowsAzure\Common\Internal\RestProxy;
-use WindowsAzure\Common\Internal\ServiceRestProxy;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Http\HttpClient;
-use WindowsAzure\Common\Internal\Serialization\XmlSerializer;
+use Tests\Mock\AzureServiceBus\Common\Internal\Filters\SimpleFilterMock;
+use AzureServiceBus\Common\Internal\RestProxy;
+use AzureServiceBus\Common\Internal\ServiceRestProxy;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Http\HttpClient;
+use AzureServiceBus\Common\Internal\Serialization\XmlSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -50,7 +49,7 @@ use PHPUnit\Framework\TestCase;
 class ServiceRestProxyTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\ServiceRestProxy::generateMetadataHeaders
+     * @covers \AzureServiceBus\Common\Internal\ServiceRestProxy::generateMetadataHeaders
      */
     public function test__construct()
     {
@@ -72,7 +71,7 @@ class ServiceRestProxyTest extends TestCase
     }
 
     /**
-     * @covers  \WindowsAzure\Common\Internal\ServiceRestProxy::withFilter
+     * @covers  \AzureServiceBus\Common\Internal\ServiceRestProxy::withFilter
      * @depends test__construct
      */
     public function testWithFilter(RestProxy $restRestProxy)
@@ -89,7 +88,7 @@ class ServiceRestProxyTest extends TestCase
     }
 
     /**
-     * @covers  \WindowsAzure\Common\Internal\ServiceRestProxy::getFilters
+     * @covers  \AzureServiceBus\Common\Internal\ServiceRestProxy::getFilters
      * @depends test__construct
      */
     public function testGetFilters(RestProxy $restRestProxy)
@@ -108,47 +107,7 @@ class ServiceRestProxyTest extends TestCase
     }
 
     /**
-     * @covers  \WindowsAzure\Common\Internal\ServiceRestProxy::addOptionalAccessConditionHeader
-     * @depends test__construct
-     */
-    public function testAddOptionalAccessConditionHeader(ServiceRestProxy $restRestProxy)
-    {
-        // Setup
-        $expectedHeader = Resources::IF_MATCH;
-        $expectedValue = '0x8CAFB82EFF70C46';
-        $accessCondition = AccessCondition::ifMatch($expectedValue);
-        $headers = ['Header1' => 'Value1', 'Header2' => 'Value2'];
-
-        // Test
-        $actual = $restRestProxy->addOptionalAccessConditionHeader($headers, $accessCondition);
-
-        // Assert
-        $this->assertCount(3, $actual);
-        $this->assertEquals($expectedValue, $actual[$expectedHeader]);
-    }
-
-    /**
-     * @covers  \WindowsAzure\Common\Internal\ServiceRestProxy::addOptionalSourceAccessConditionHeader
-     * @depends test__construct
-     */
-    public function testAddOptionalSourceAccessConditionHeader(ServiceRestProxy $restRestProxy)
-    {
-        // Setup
-        $expectedHeader = Resources::X_MS_SOURCE_IF_MATCH;
-        $expectedValue = '0x8CAFB82EFF70C46';
-        $accessCondition = AccessCondition::ifMatch($expectedValue);
-        $headers = ['Header1' => 'Value1', 'Header2' => 'Value2'];
-
-        // Test
-        $actual = $restRestProxy->addOptionalSourceAccessConditionHeader($headers, $accessCondition);
-
-        // Assert
-        $this->assertCount(3, $actual);
-        $this->assertEquals($expectedValue, $actual[$expectedHeader]);
-    }
-
-    /**
-     * @covers  \WindowsAzure\Common\Internal\ServiceRestProxy::groupQueryValues
+     * @covers  \AzureServiceBus\Common\Internal\ServiceRestProxy::groupQueryValues
      * @depends test__construct
      */
     public function testGroupQueryValues(ServiceRestProxy $restRestProxy)
@@ -165,7 +124,7 @@ class ServiceRestProxyTest extends TestCase
     }
 
     /**
-     * @covers  \WindowsAzure\Common\Internal\ServiceRestProxy::groupQueryValues
+     * @covers  \AzureServiceBus\Common\Internal\ServiceRestProxy::groupQueryValues
      * @depends test__construct
      */
     public function testGroupQueryValuesWithNulls(ServiceRestProxy $restRestProxy)
@@ -181,7 +140,7 @@ class ServiceRestProxyTest extends TestCase
     }
 
     /**
-     * @covers  \WindowsAzure\Common\Internal\ServiceRestProxy::groupQueryValues
+     * @covers  \AzureServiceBus\Common\Internal\ServiceRestProxy::groupQueryValues
      * @depends test__construct
      */
     public function testGroupQueryValuesWithMix(ServiceRestProxy $restRestProxy)
@@ -198,7 +157,7 @@ class ServiceRestProxyTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\ServiceRestProxy::addPostParameter
+     * @covers \AzureServiceBus\Common\Internal\ServiceRestProxy::addPostParameter
      * @depends test__construct
      */
     public function testPostParameter(ServiceRestProxy $restRestProxy)
@@ -220,7 +179,7 @@ class ServiceRestProxyTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ServiceRestProxy::generateMetadataHeaders
+     * @covers \AzureServiceBus\Common\Internal\ServiceRestProxy::generateMetadataHeaders
      * @depends test__construct
      */
     public function testGenerateMetadataHeader(ServiceRestProxy $proxy)
@@ -240,21 +199,21 @@ class ServiceRestProxyTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ServiceRestProxy::generateMetadataHeaders
+     * @covers \AzureServiceBus\Common\Internal\ServiceRestProxy::generateMetadataHeaders
      * @depends test__construct
      */
     public function testGenerateMetadataHeaderInvalidNameFail(ServiceRestProxy $proxy)
     {
         // Setup
         $metadata = ['key1' => "value1\n", 'MyName' => "\rAzurr", 'MyCompany' => "Micr\r\nosoft_"];
-        $this->setExpectedException(get_class(new \InvalidArgumentException(Resources::INVALID_META_MSG)));
+        $this->expectException(get_class(new \InvalidArgumentException(Resources::INVALID_META_MSG)));
 
         // Test
         $proxy->generateMetadataHeaders($metadata);
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ServiceRestProxy::getMetadataArray
+     * @covers \AzureServiceBus\Common\Internal\ServiceRestProxy::getMetadataArray
      * @depends test__construct
      */
     public function testGetMetadataArray(ServiceRestProxy $proxy)
@@ -274,7 +233,7 @@ class ServiceRestProxyTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ServiceRestProxy::getMetadataArray
+     * @covers \AzureServiceBus\Common\Internal\ServiceRestProxy::getMetadataArray
      * @depends test__construct
      */
     public function testGetMetadataArrayWithMsHeaders(ServiceRestProxy $proxy)

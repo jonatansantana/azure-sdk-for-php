@@ -23,7 +23,7 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal;
+namespace AzureServiceBus\Common\Internal;
 
 /**
  * Utilities for the project.

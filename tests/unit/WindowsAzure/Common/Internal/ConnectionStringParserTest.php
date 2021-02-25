@@ -23,9 +23,9 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal;
+namespace Tests\unit\AzureServiceBus\Common\Internal;
 
-use WindowsAzure\Common\Internal\ConnectionStringParser;
+use AzureServiceBus\Common\Internal\ConnectionStringParser;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -63,22 +63,22 @@ class ConnectionStringParserTest extends TestCase
     private function _parseTestFail($value)
     {
         // Setup
-        $this->setExpectedException('\RuntimeException');
+        $this->expectException('\RuntimeException');
 
         // Test
         ConnectionStringParser::parseConnectionString('connectionString', $value);
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::parseConnectionString 
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::__construct
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_parse
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_createException
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_skipWhiteSpaces
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_extractKey
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_extractString
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_skipOperator
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_extractValue
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::parseConnectionString 
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::__construct
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_parse
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_createException
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_skipWhiteSpaces
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_extractKey
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_extractString
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_skipOperator
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_extractValue
      */
     public function testKeyNames()
     {
@@ -100,15 +100,15 @@ class ConnectionStringParserTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::parseConnectionString 
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::__construct
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_parse
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_createException
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_skipWhiteSpaces
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_extractKey
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_extractString
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_skipOperator
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_extractValue
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::parseConnectionString 
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::__construct
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_parse
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_createException
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_skipWhiteSpaces
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_extractKey
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_extractString
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_skipOperator
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_extractValue
      */
     public function testAssignments()
     {
@@ -118,15 +118,15 @@ class ConnectionStringParserTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::parseConnectionString 
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::__construct
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_parse
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_createException
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_skipWhiteSpaces
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_extractKey
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_extractString
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_skipOperator
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_extractValue
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::parseConnectionString 
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::__construct
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_parse
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_createException
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_skipWhiteSpaces
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_extractKey
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_extractString
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_skipOperator
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_extractValue
      */
     public function testValues()
     {
@@ -155,15 +155,15 @@ class ConnectionStringParserTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::parseConnectionString 
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::__construct
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_parse
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_createException
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_skipWhiteSpaces
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_extractKey
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_extractString
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_skipOperator
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_extractValue
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::parseConnectionString 
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::__construct
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_parse
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_createException
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_skipWhiteSpaces
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_extractKey
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_extractString
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_skipOperator
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_extractValue
      */
     public function testSeparators()
     {
@@ -175,15 +175,15 @@ class ConnectionStringParserTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::parseConnectionString 
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::__construct
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_parse
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_createException
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_skipWhiteSpaces
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_extractKey
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_extractString
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_skipOperator
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringParser::_extractValue
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::parseConnectionString 
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::__construct
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_parse
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_createException
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_skipWhiteSpaces
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_extractKey
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_extractString
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_skipOperator
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringParser::_extractValue
      */
     public function testInvalidInputFail()
     {

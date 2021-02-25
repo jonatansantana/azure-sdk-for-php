@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Models\ListQueuesOptions;
+use AzureServiceBus\ServiceBus\Models\ListQueuesOptions;
 
 use PHPUnit\Framework\TestCase;
 
@@ -45,7 +45,7 @@ use PHPUnit\Framework\TestCase;
 class ListQueuesOptionsTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\ListQueuesOptions::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\ListQueuesOptions::__construct
      */
     public function testListQueuesOptionsConstructor()
     {

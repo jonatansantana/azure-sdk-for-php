@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Atom;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Atom;
 
-use WindowsAzure\Common\Internal\Atom\Person;
+use AzureServiceBus\Common\Internal\Atom\Person;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,7 +44,7 @@ use PHPUnit\Framework\TestCase;
 class PersonTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Person::__construct
+     * @covers \AzureServiceBus\Common\Internal\Atom\Person::__construct
      */
     public function testPersonConstructor()
     {
@@ -58,8 +58,8 @@ class PersonTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Person::getName
-     * @covers \WindowsAzure\Common\Internal\Atom\Person::setName
+     * @covers \AzureServiceBus\Common\Internal\Atom\Person::getName
+     * @covers \AzureServiceBus\Common\Internal\Atom\Person::setName
      */
     public function testGetSetName()
     {
@@ -79,8 +79,8 @@ class PersonTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Person::getUri
-     * @covers \WindowsAzure\Common\Internal\Atom\Person::setUri
+     * @covers \AzureServiceBus\Common\Internal\Atom\Person::getUri
+     * @covers \AzureServiceBus\Common\Internal\Atom\Person::setUri
      */
     public function testGetSetUri()
     {
@@ -100,8 +100,8 @@ class PersonTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Person::getEmail
-     * @covers \WindowsAzure\Common\Internal\Atom\Person::setEmail
+     * @covers \AzureServiceBus\Common\Internal\Atom\Person::getEmail
+     * @covers \AzureServiceBus\Common\Internal\Atom\Person::setEmail
      */
     public function testGetSetEmail()
     {

@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Models\QueueDescription;
+use AzureServiceBus\ServiceBus\Models\QueueDescription;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,7 +44,7 @@ use PHPUnit\Framework\TestCase;
 class QueueDescriptionTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::__construct
      */
     public function testQueueDescriptionConstructor()
     {
@@ -58,8 +58,8 @@ class QueueDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::getLockDuration
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::setLockDuration
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::getLockDuration
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::setLockDuration
      */
     public function testGetSetLockDuration()
     {
@@ -79,8 +79,8 @@ class QueueDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::getMaxSizeInMegabytes
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::setMaxSizeInMegabytes
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::getMaxSizeInMegabytes
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::setMaxSizeInMegabytes
      */
     public function testGetSetMaxSizeInMegabytes()
     {
@@ -100,8 +100,8 @@ class QueueDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::getRequiresDuplicateDetection
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::setRequiresDuplicateDetection
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::getRequiresDuplicateDetection
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::setRequiresDuplicateDetection
      */
     public function testGetSetRequiresDuplicateDetection()
     {
@@ -121,8 +121,8 @@ class QueueDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::getRequiresSession
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::setRequiresSession
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::getRequiresSession
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::setRequiresSession
      */
     public function testGetSetRequiresSession()
     {
@@ -142,8 +142,8 @@ class QueueDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::getDefaultMessageTimeToLive
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::setDefaultMessageTimeToLive
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::getDefaultMessageTimeToLive
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::setDefaultMessageTimeToLive
      */
     public function testGetSetDefaultMessageTimeToLive()
     {
@@ -163,8 +163,8 @@ class QueueDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::getDeadLetteringOnMessageExpiration
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::setDeadLetteringOnMessageExpiration
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::getDeadLetteringOnMessageExpiration
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::setDeadLetteringOnMessageExpiration
      */
     public function testGetSetDeadLetteringOnMessageExpiration()
     {
@@ -184,8 +184,8 @@ class QueueDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::getDuplicateDetectionHistoryTimeWindow
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::setDuplicateDetectionHistoryTimeWindow
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::getDuplicateDetectionHistoryTimeWindow
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::setDuplicateDetectionHistoryTimeWindow
      */
     public function testGetSetDuplicateDetectionHistoryTimeWindow()
     {
@@ -205,8 +205,8 @@ class QueueDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::getMaxDeliveryCount
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::setMaxDeliveryCount
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::getMaxDeliveryCount
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::setMaxDeliveryCount
      */
     public function testGetSetMaxDeliveryCount()
     {
@@ -226,8 +226,8 @@ class QueueDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::getEnableBatchedOperations
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::setEnableBatchedOperations
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::getEnableBatchedOperations
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::setEnableBatchedOperations
      */
     public function testGetSetEnableBatchedOperations()
     {
@@ -247,8 +247,8 @@ class QueueDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::getSizeInBytes
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::setSizeInBytes
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::getSizeInBytes
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::setSizeInBytes
      */
     public function testGetSetSizeInBytes()
     {
@@ -268,8 +268,8 @@ class QueueDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::getMessageCount
-     * @covers \WindowsAzure\ServiceBus\Models\QueueDescription::setMessageCount
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::getMessageCount
+     * @covers \AzureServiceBus\ServiceBus\Models\QueueDescription::setMessageCount
      */
     public function testGetSetMessageCount()
     {

@@ -23,11 +23,11 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Filters;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Filters;
 
-use WindowsAzure\Common\Internal\Filters\DateFilter;
-use WindowsAzure\Common\Internal\Http\HttpClient;
-use WindowsAzure\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Filters\DateFilter;
+use AzureServiceBus\Common\Internal\Http\HttpClient;
+use AzureServiceBus\Common\Internal\Resources;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -46,7 +46,7 @@ use PHPUnit\Framework\TestCase;
 class DateFilterTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\Filters\DateFilter::handleRequest
+     * @covers \AzureServiceBus\Common\Internal\Filters\DateFilter::handleRequest
      */
     public function testHandleRequest()
     {
@@ -62,7 +62,7 @@ class DateFilterTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Filters\DateFilter::handleResponse
+     * @covers \AzureServiceBus\Common\Internal\Filters\DateFilter::handleResponse
      */
     public function testHandleResponse()
     {

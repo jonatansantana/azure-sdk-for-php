@@ -23,14 +23,14 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Http;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Http;
 
 use Tests\framework\TestResources;
-use Tests\mock\WindowsAzure\Common\Internal\Filters\SimpleFilterMock;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Http\HttpClient;
-use WindowsAzure\Common\Internal\Http\Url;
-use WindowsAzure\Common\ServiceException;
+use Tests\mock\AzureServiceBus\Common\Internal\Filters\SimpleFilterMock;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Http\HttpClient;
+use AzureServiceBus\Common\Internal\Http\Url;
+use AzureServiceBus\Common\ServiceException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -49,7 +49,7 @@ use PHPUnit\Framework\TestCase;
 class HttpClientTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::__construct
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::__construct
      */
     public function test__construct()
     {
@@ -62,7 +62,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::setUrl
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::setUrl
      */
     public function testSetUrl()
     {
@@ -74,11 +74,11 @@ class HttpClientTest extends TestCase
         $channel->setUrl($url);
 
         // Assert
-        $this->assertInstanceOf('\WindowsAzure\Common\Internal\Http\IUrl', $channel->getUrl());
+        $this->assertInstanceOf('\AzureServiceBus\Common\Internal\Http\IUrl', $channel->getUrl());
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::getUrl
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::getUrl
      */
     public function testGetUrl()
     {
@@ -91,12 +91,12 @@ class HttpClientTest extends TestCase
         $channelUrl = $channel->getUrl();
 
         // Assert
-        $this->assertInstanceOf('WindowsAzure\Common\Internal\Http\IUrl', $channelUrl);
+        $this->assertInstanceOf('AzureServiceBus\Common\Internal\Http\IUrl', $channelUrl);
         $this->assertEquals(TestResources::VALID_URL.'/', $channelUrl);
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::setMethod
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::setMethod
      */
     public function testSetMethod()
     {
@@ -112,7 +112,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::getMethod
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::getMethod
      */
     public function testGetMethod()
     {
@@ -129,7 +129,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::setHeaders
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::setHeaders
      */
     public function testSetHeaders()
     {
@@ -152,7 +152,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::getHeaders
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::getHeaders
      */
     public function testGetHeaders()
     {
@@ -175,7 +175,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::setHeader
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::setHeader
      */
     public function testSetHeaderNewHeader()
     {
@@ -192,7 +192,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::setHeader
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::setHeader
      */
     public function testSetHeaderExistingHeaderReplace()
     {
@@ -210,7 +210,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::setHeader
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::setHeader
      */
     public function testSetHeaderExistingHeaderAppend()
     {
@@ -229,7 +229,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::sendAndGetHttpResponse
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::sendAndGetHttpResponse
      */
     public function testSendAndGetHttpResponse()
     {
@@ -246,7 +246,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::send
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::send
      */
     public function testSendSimple()
     {
@@ -263,7 +263,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::send
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::send
      */
     public function testSendWithContent()
     {
@@ -273,14 +273,14 @@ class HttpClientTest extends TestCase
         $channel->setExpectedStatusCode('200');
         $channel->setBody('This is body');
         $channel->setMethod('PUT');
-        $this->setExpectedException(get_class(new ServiceException('405')));
+        $this->expectException(get_class(new ServiceException('405')));
 
         // Test
         $channel->send([], $url);
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::send
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::send
      */
     public function testSendWithOneFilter()
     {
@@ -303,7 +303,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::send
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::send
      */
     public function testSendWithMultipleFilters()
     {
@@ -331,7 +331,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::send
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::send
      */
     public function testSendFail()
     {
@@ -339,14 +339,14 @@ class HttpClientTest extends TestCase
         $channel = new HttpClient();
         $url = new Url('http://example.com/');
         $channel->setExpectedStatusCode('201');
-        $this->setExpectedException(get_class(new ServiceException('200')));
+        $this->expectException(get_class(new ServiceException('200')));
 
         // Test
         $channel->send([], $url);
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::setExpectedStatusCode
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::setExpectedStatusCode
      */
     public function testSetSuccessfulStatusCodeSimple()
     {
@@ -362,7 +362,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::setExpectedStatusCode
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::setExpectedStatusCode
      */
     public function testSetSuccessfulStatusCodeArray()
     {
@@ -378,7 +378,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::getSuccessfulStatusCode
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::getSuccessfulStatusCode
      */
     public function testGetSuccessfulStatusCode()
     {
@@ -395,7 +395,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::setConfig
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::setConfig
      */
     public function testSetConfig()
     {
@@ -412,7 +412,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::getConfig
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::getConfig
      */
     public function testGetConfig()
     {
@@ -430,7 +430,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::setBody
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::setBody
      */
     public function testSetBody()
     {
@@ -446,7 +446,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::getBody
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::getBody
      */
     public function testGetBody()
     {
@@ -463,7 +463,7 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::__clone
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::__clone
      */
     public function test__clone()
     {
@@ -483,12 +483,12 @@ class HttpClientTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpClient::throwIfError
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpClient::throwIfError
      */
     public function testThrowIfError()
     {
         // Setup
-        $this->setExpectedException(get_class(new ServiceException('200')));
+        $this->expectException(get_class(new ServiceException('200')));
 
         HttpClient::throwIfError(200, null, null, [10]);
     }

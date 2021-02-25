@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\ServiceBus\Models;
+namespace Tests\Unit\AzureServiceBus\ServiceBus\Models;
 
-use WindowsAzure\ServiceBus\Internal\Filter;
+use AzureServiceBus\ServiceBus\Internal\Filter;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,7 +44,7 @@ use PHPUnit\Framework\TestCase;
 class FilterTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Internal\Filter::__construct
+     * @covers \AzureServiceBus\ServiceBus\Internal\Filter::__construct
      */
     public function testFilterConstructor()
     {

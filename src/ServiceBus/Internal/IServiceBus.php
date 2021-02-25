@@ -23,24 +23,24 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\ServiceBus\Internal;
+namespace AzureServiceBus\ServiceBus\Internal;
 
 use Exception;
-use WindowsAzure\Common\Internal\FilterableService;
-use WindowsAzure\ServiceBus\Models\BrokeredMessage;
-use WindowsAzure\ServiceBus\Models\ListQueuesOptions;
-use WindowsAzure\ServiceBus\Models\ListQueuesResult;
-use WindowsAzure\ServiceBus\Models\ListRulesOptions;
-use WindowsAzure\ServiceBus\Models\ListRulesResult;
-use WindowsAzure\ServiceBus\Models\ListSubscriptionsOptions;
-use WindowsAzure\ServiceBus\Models\ListSubscriptionsResult;
-use WindowsAzure\ServiceBus\Models\ListTopicsOptions;
-use WindowsAzure\ServiceBus\Models\ListTopicsResult;
-use WindowsAzure\ServiceBus\Models\QueueInfo;
-use WindowsAzure\ServiceBus\Models\ReceiveMessageOptions;
-use WindowsAzure\ServiceBus\Models\RuleInfo;
-use WindowsAzure\ServiceBus\Models\SubscriptionInfo;
-use WindowsAzure\ServiceBus\Models\TopicInfo;
+use AzureServiceBus\Common\Internal\FilterableService;
+use AzureServiceBus\ServiceBus\Models\BrokeredMessage;
+use AzureServiceBus\ServiceBus\Models\ListQueuesOptions;
+use AzureServiceBus\ServiceBus\Models\ListQueuesResult;
+use AzureServiceBus\ServiceBus\Models\ListRulesOptions;
+use AzureServiceBus\ServiceBus\Models\ListRulesResult;
+use AzureServiceBus\ServiceBus\Models\ListSubscriptionsOptions;
+use AzureServiceBus\ServiceBus\Models\ListSubscriptionsResult;
+use AzureServiceBus\ServiceBus\Models\ListTopicsOptions;
+use AzureServiceBus\ServiceBus\Models\ListTopicsResult;
+use AzureServiceBus\ServiceBus\Models\QueueInfo;
+use AzureServiceBus\ServiceBus\Models\ReceiveMessageOptions;
+use AzureServiceBus\ServiceBus\Models\RuleInfo;
+use AzureServiceBus\ServiceBus\Models\SubscriptionInfo;
+use AzureServiceBus\ServiceBus\Models\TopicInfo;
 
 /**
  * This class constructs HTTP requests and receive HTTP responses for Service Bus.

@@ -23,10 +23,10 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\ServiceBus\Models;
+namespace Tests\Unit\AzureServiceBus\ServiceBus\Models;
 
-use WindowsAzure\ServiceBus\Internal\ActiveToken;
-use WindowsAzure\ServiceBus\Internal\WrapAccessTokenResult;
+use AzureServiceBus\ServiceBus\Internal\ActiveToken;
+use AzureServiceBus\ServiceBus\Internal\WrapAccessTokenResult;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -45,7 +45,7 @@ use PHPUnit\Framework\TestCase;
 class ActiveTokenTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Internal\ActiveToken::__construct
+     * @covers \AzureServiceBus\ServiceBus\Internal\ActiveToken::__construct
      */
     public function testActiveTokenConstructor()
     {
@@ -60,8 +60,8 @@ class ActiveTokenTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\Internal\ActiveToken::getWrapAccessTokenResult
-     * @covers \WindowsAzure\ServiceBus\Internal\ActiveToken::setWrapAccessTokenResult
+     * @covers \AzureServiceBus\ServiceBus\Internal\ActiveToken::getWrapAccessTokenResult
+     * @covers \AzureServiceBus\ServiceBus\Internal\ActiveToken::setWrapAccessTokenResult
      */
     public function testActiveTokenGetSetWrapAccessTokenResult()
     {
@@ -81,8 +81,8 @@ class ActiveTokenTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\Internal\ActiveToken::getExpirationDateTime
-     * @covers \WindowsAzure\ServiceBus\Internal\ActiveToken::setExpirationDateTime
+     * @covers \AzureServiceBus\ServiceBus\Internal\ActiveToken::getExpirationDateTime
+     * @covers \AzureServiceBus\ServiceBus\Internal\ActiveToken::setExpirationDateTime
      */
     public function testActiveTokenGetSetExpirationDateTimeResult()
     {

@@ -23,10 +23,10 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Serialization;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Serialization;
 
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Internal\Serialization\JsonSerializer;
+use AzureServiceBus\Common\Internal\Serialization\JsonSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -45,7 +45,7 @@ use PHPUnit\Framework\TestCase;
 class JsonSerializerTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\Serialization\JsonSerializer::objectSerialize
+     * @covers \AzureServiceBus\Common\Internal\Serialization\JsonSerializer::objectSerialize
      */
     public function testObjectSerialize()
     {
@@ -62,7 +62,7 @@ class JsonSerializerTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Serialization\JsonSerializer::unserialize
+     * @covers \AzureServiceBus\Common\Internal\Serialization\JsonSerializer::unserialize
      */
     public function testUnserializeArray()
     {
@@ -79,7 +79,7 @@ class JsonSerializerTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Serialization\JsonSerializer::unserialize
+     * @covers \AzureServiceBus\Common\Internal\Serialization\JsonSerializer::unserialize
      */
     public function testUnserializeObject()
     {
@@ -96,7 +96,7 @@ class JsonSerializerTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Serialization\JsonSerializer::unserialize
+     * @covers \AzureServiceBus\Common\Internal\Serialization\JsonSerializer::unserialize
      */
     public function testUnserializeEmptyString()
     {
@@ -113,7 +113,7 @@ class JsonSerializerTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Serialization\JsonSerializer::unserialize
+     * @covers \AzureServiceBus\Common\Internal\Serialization\JsonSerializer::unserialize
      */
     public function testUnserializeInvalidString()
     {
@@ -130,7 +130,7 @@ class JsonSerializerTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Serialization\JsonSerializer::serialize
+     * @covers \AzureServiceBus\Common\Internal\Serialization\JsonSerializer::serialize
      */
     public function testSerialize()
     {

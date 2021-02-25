@@ -23,10 +23,10 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Models\TopicDescription;
-use WindowsAzure\ServiceBus\Models\TopicInfo;
+use AzureServiceBus\ServiceBus\Models\TopicDescription;
+use AzureServiceBus\ServiceBus\Models\TopicInfo;
 
 use PHPUnit\Framework\TestCase;
 
@@ -46,7 +46,7 @@ use PHPUnit\Framework\TestCase;
 class TopicInfoTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\TopicInfo::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicInfo::__construct
      */
     public function testTopicInfoConstructor()
     {
@@ -60,8 +60,8 @@ class TopicInfoTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\TopicInfo::getTopicDescription
-     * @covers \WindowsAzure\ServiceBus\Models\TopicInfo::setTopicDescription
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicInfo::getTopicDescription
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicInfo::setTopicDescription
      */
     public function testGetSetTopicDescription()
     {
@@ -81,8 +81,8 @@ class TopicInfoTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\TopicInfo::getDefaultMessageTimeToLive
-     * @covers \WindowsAzure\ServiceBus\Models\TopicInfo::setDefaultMessageTimeToLive
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicInfo::getDefaultMessageTimeToLive
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicInfo::setDefaultMessageTimeToLive
      */
     public function testGetSetDefaultMessageTimeToLive()
     {
@@ -102,8 +102,8 @@ class TopicInfoTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\TopicInfo::getMaxSizeInMegabytes
-     * @covers \WindowsAzure\ServiceBus\Models\TopicInfo::setMaxSizeInMegabytes
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicInfo::getMaxSizeInMegabytes
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicInfo::setMaxSizeInMegabytes
      */
     public function testGetSetMaxSizeInMegabytes()
     {
@@ -123,8 +123,8 @@ class TopicInfoTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\TopicInfo::getRequiresDuplicateDetection
-     * @covers \WindowsAzure\ServiceBus\Models\TopicInfo::setRequiresDuplicateDetection
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicInfo::getRequiresDuplicateDetection
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicInfo::setRequiresDuplicateDetection
      */
     public function testGetSetRequiresDuplicateDetection()
     {
@@ -144,8 +144,8 @@ class TopicInfoTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\TopicInfo::getDuplicateDetectionHistoryTimeWindow
-     * @covers \WindowsAzure\ServiceBus\Models\TopicInfo::setDuplicateDetectionHistoryTimeWindow
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicInfo::getDuplicateDetectionHistoryTimeWindow
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicInfo::setDuplicateDetectionHistoryTimeWindow
      */
     public function testGetSetDuplicateDetectionHistoryTimeWindow()
     {
@@ -165,8 +165,8 @@ class TopicInfoTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\TopicInfo::getEnableBatchedOperations
-     * @covers \WindowsAzure\ServiceBus\Models\TopicInfo::setEnableBatchedOperations
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicInfo::getEnableBatchedOperations
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicInfo::setEnableBatchedOperations
      */
     public function testGetSetEnableBatchedOperations()
     {
@@ -186,8 +186,8 @@ class TopicInfoTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\TopicInfo::getSizeInBytes
-     * @covers \WindowsAzure\ServiceBus\Models\TopicInfo::setSizeInBytes
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicInfo::getSizeInBytes
+     * @covers \AzureServiceBus\ServiceBus\Models\TopicInfo::setSizeInBytes
      */
     public function testGetSetSizeInBytes()
     {

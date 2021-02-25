@@ -23,12 +23,12 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal;
+namespace AzureServiceBus\Common\Internal;
 
-use WindowsAzure\Common\Internal\Http\HttpClient;
-use WindowsAzure\ServiceBus\Internal\WrapRestProxy;
-use WindowsAzure\Common\Internal\Filters\WrapFilter;
-use WindowsAzure\Common\Internal\Filters\SASFilter;
+use AzureServiceBus\Common\Internal\Http\HttpClient;
+use AzureServiceBus\ServiceBus\Internal\WrapRestProxy;
+use AzureServiceBus\Common\Internal\Filters\WrapFilter;
+use AzureServiceBus\Common\Internal\Filters\SASFilter;
 /**
  * Represents the settings used to sign and access a request against the service
  * bus.

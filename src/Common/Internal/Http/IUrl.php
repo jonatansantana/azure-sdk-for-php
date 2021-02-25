@@ -23,7 +23,7 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Http;
+namespace AzureServiceBus\Common\Internal\Http;
 
 /**
  * Defines what are main url functionalities that should be supported.

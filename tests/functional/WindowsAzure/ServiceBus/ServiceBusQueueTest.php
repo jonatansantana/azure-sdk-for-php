@@ -23,15 +23,15 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\functional\WindowsAzure\ServiceBus;
+namespace Tests\functional\AzureServiceBus\ServiceBus;
 
 
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\ServiceBus\Models\BrokeredMessage;
-use WindowsAzure\ServiceBus\Models\BrokerProperties;
-use WindowsAzure\ServiceBus\Models\ListQueuesOptions;
-use WindowsAzure\ServiceBus\Models\ReceiveMessageOptions;
-use WindowsAzure\ServiceBus\Models\QueueInfo;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\ServiceBus\Models\BrokeredMessage;
+use AzureServiceBus\ServiceBus\Models\BrokerProperties;
+use AzureServiceBus\ServiceBus\Models\ListQueuesOptions;
+use AzureServiceBus\ServiceBus\Models\ReceiveMessageOptions;
+use AzureServiceBus\ServiceBus\Models\QueueInfo;
 
 class ServiceBusQueueTest extends ScenarioTestBase
 {
@@ -40,8 +40,8 @@ class ServiceBusQueueTest extends ScenarioTestBase
     private $PEEK_LOCK;
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::deleteQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::listQueues
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::deleteQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::listQueues
      */
     public function testSendMessage()
     {
@@ -67,10 +67,10 @@ class ServiceBusQueueTest extends ScenarioTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::deleteQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::getQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::listQueues
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::deleteQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::getQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::listQueues
      */
     private function setupQueue()
     {
@@ -104,7 +104,7 @@ class ServiceBusQueueTest extends ScenarioTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::sendQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::sendQueueMessage
      *
      * @return BrokeredMessage[]
      */
@@ -162,10 +162,10 @@ class ServiceBusQueueTest extends ScenarioTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::deleteMessage
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::getQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::unlockMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::deleteMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::getQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::unlockMessage
      *
      * @param BrokeredMessage[] $expectedMessages
      */

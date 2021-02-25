@@ -23,36 +23,36 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\ServiceBus;
+namespace AzureServiceBus\ServiceBus;
 
 use Psr\Http\Message\ResponseInterface;
-use WindowsAzure\Common\Internal\Http\IHttpClient;
-use WindowsAzure\Common\Internal\Serialization\ISerializer;
-use WindowsAzure\Common\Internal\ServiceRestProxy;
-use WindowsAzure\Common\Internal\Http\HttpCallContext;
-use WindowsAzure\Common\Internal\Http\HttpClient;
-use WindowsAzure\Common\Internal\Serialization\XmlSerializer;
-use WindowsAzure\Common\Internal\Atom\Content;
-use WindowsAzure\Common\Internal\Atom\Entry;
-use WindowsAzure\ServiceBus\Internal\IServiceBus;
-use WindowsAzure\ServiceBus\Models\BrokeredMessage;
-use WindowsAzure\ServiceBus\Models\BrokerProperties;
-use WindowsAzure\ServiceBus\Models\ListQueuesOptions;
-use WindowsAzure\ServiceBus\Models\ListQueuesResult;
-use WindowsAzure\ServiceBus\Models\ListSubscriptionsOptions;
-use WindowsAzure\ServiceBus\Models\ListSubscriptionsResult;
-use WindowsAzure\ServiceBus\Models\ListTopicsOptions;
-use WindowsAzure\ServiceBus\Models\ListTopicsResult;
-use WindowsAzure\ServiceBus\Models\ListRulesOptions;
-use WindowsAzure\ServiceBus\Models\ListRulesResult;
-use WindowsAzure\ServiceBus\Models\ListOptions;
-use WindowsAzure\ServiceBus\Models\QueueInfo;
-use WindowsAzure\ServiceBus\Models\ReceiveMessageOptions;
-use WindowsAzure\ServiceBus\Models\RuleInfo;
-use WindowsAzure\ServiceBus\Models\SubscriptionInfo;
-use WindowsAzure\ServiceBus\Models\TopicInfo;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Validate;
+use AzureServiceBus\Common\Internal\Http\IHttpClient;
+use AzureServiceBus\Common\Internal\Serialization\ISerializer;
+use AzureServiceBus\Common\Internal\ServiceRestProxy;
+use AzureServiceBus\Common\Internal\Http\HttpCallContext;
+use AzureServiceBus\Common\Internal\Http\HttpClient;
+use AzureServiceBus\Common\Internal\Serialization\XmlSerializer;
+use AzureServiceBus\Common\Internal\Atom\Content;
+use AzureServiceBus\Common\Internal\Atom\Entry;
+use AzureServiceBus\ServiceBus\Internal\IServiceBus;
+use AzureServiceBus\ServiceBus\Models\BrokeredMessage;
+use AzureServiceBus\ServiceBus\Models\BrokerProperties;
+use AzureServiceBus\ServiceBus\Models\ListQueuesOptions;
+use AzureServiceBus\ServiceBus\Models\ListQueuesResult;
+use AzureServiceBus\ServiceBus\Models\ListSubscriptionsOptions;
+use AzureServiceBus\ServiceBus\Models\ListSubscriptionsResult;
+use AzureServiceBus\ServiceBus\Models\ListTopicsOptions;
+use AzureServiceBus\ServiceBus\Models\ListTopicsResult;
+use AzureServiceBus\ServiceBus\Models\ListRulesOptions;
+use AzureServiceBus\ServiceBus\Models\ListRulesResult;
+use AzureServiceBus\ServiceBus\Models\ListOptions;
+use AzureServiceBus\ServiceBus\Models\QueueInfo;
+use AzureServiceBus\ServiceBus\Models\ReceiveMessageOptions;
+use AzureServiceBus\ServiceBus\Models\RuleInfo;
+use AzureServiceBus\ServiceBus\Models\SubscriptionInfo;
+use AzureServiceBus\ServiceBus\Models\TopicInfo;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Validate;
 
 /**
  * This class constructs HTTP requests and receive HTTP responses

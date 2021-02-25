@@ -22,9 +22,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\ServiceBus\Models;
+namespace AzureServiceBus\ServiceBus\Models;
 
-use WindowsAzure\ServiceBus\Internal\Filter;
+use AzureServiceBus\ServiceBus\Internal\Filter;
 
 /**
  * The base class for rule filter.

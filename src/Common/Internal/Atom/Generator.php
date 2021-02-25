@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Atom;
+namespace AzureServiceBus\Common\Internal\Atom;
 
-use WindowsAzure\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Resources;
 
 /**
  * The generator class of ATOM library.

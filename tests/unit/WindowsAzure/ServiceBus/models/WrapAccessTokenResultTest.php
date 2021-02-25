@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Internal\WrapAccessTokenResult;
+use AzureServiceBus\ServiceBus\Internal\WrapAccessTokenResult;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,7 +44,7 @@ use PHPUnit\Framework\TestCase;
 class WrapAccessTokenResultTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Internal\WrapAccessTokenResult::create
+     * @covers \AzureServiceBus\ServiceBus\Internal\WrapAccessTokenResult::create
      */
     public function testCreateWrapAccessTokenSuccess()
     {
@@ -77,8 +77,8 @@ class WrapAccessTokenResultTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\Internal\WrapAccessTokenResult::getAccessToken
-     * @covers \WindowsAzure\ServiceBus\Internal\WrapAccessTokenResult::setAccessToken
+     * @covers \AzureServiceBus\ServiceBus\Internal\WrapAccessTokenResult::getAccessToken
+     * @covers \AzureServiceBus\ServiceBus\Internal\WrapAccessTokenResult::setAccessToken
      */
     public function testGetAccessToken()
     {
@@ -95,8 +95,8 @@ class WrapAccessTokenResultTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\Internal\WrapAccessTokenResult::getExpiresIn
-     * @covers \WindowsAzure\ServiceBus\Internal\WrapAccessTokenResult::setExpiresIn
+     * @covers \AzureServiceBus\ServiceBus\Internal\WrapAccessTokenResult::getExpiresIn
+     * @covers \AzureServiceBus\ServiceBus\Internal\WrapAccessTokenResult::setExpiresIn
      */
     public function testGetExpiresIn()
     {

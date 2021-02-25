@@ -23,7 +23,7 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal;
+namespace AzureServiceBus\Common\Internal;
 
 /**
  * Project resources.
@@ -251,9 +251,6 @@ class Resources {
     const DS_XML_NAMESPACE = 'http://schemas.microsoft.com/ado/2007/08/dataservices';
     const DSM_XML_NAMESPACE = 'http://schemas.microsoft.com/ado/2007/08/dataservices/metadata';
     const XSI_XML_NAMESPACE = 'http://www.w3.org/2001/XMLSchema-instance';
-    const TRT_XML_NAMESPACE = 'http://schemas.microsoft.com/Azure/MediaServices/KeyDelivery/TokenRestrictionTemplate/v1';
-    const PRL_XML_NAMESPACE = 'http://schemas.microsoft.com/Azure/MediaServices/KeyDelivery/PlayReadyTemplate/v1';
-
     // Header values
     const SDK_USER_AGENT = 'Azure-SDK-For-PHP/0.5.0';
     const STORAGE_API_LATEST_VERSION = '2012-02-12';
@@ -265,9 +262,6 @@ class Resources {
     const ATOM_FEED_CONTENT_TYPE = 'application/atom+xml;type=feed;charset=utf-8';
     const ACCEPT_CHARSET_VALUE = 'utf-8';
     const INT32_MAX = 2147483647;
-    const MEDIA_SERVICES_API_LATEST_VERSION = '2.17';
-    const MEDIA_SERVICES_DATA_SERVICE_VERSION_VALUE = '3.0;NetFx';
-    const MEDIA_SERVICES_MAX_DATA_SERVICE_VERSION_VALUE = '3.0;NetFx';
 
     // Query parameter names
     const QP_PREFIX = 'Prefix';
@@ -455,14 +449,6 @@ class Resources {
     const SSL_LOCAL_CERT = 'ssl_local_cert';
     const SSL_CAFILE = 'ssl_cafile';
     const CONNECT_TIMEOUT = 'connect_timeout';
-
-    // Media services
-    const MEDIA_SERVICES_URL = 'https://media.windows.net/API/';
-    const MEDIA_SERVICES_OAUTH_URL = 'https://wamsprodglobal001acs.accesscontrol.windows.net/v2/OAuth2-13';
-    const MEDIA_SERVICES_OAUTH_SCOPE = 'urn:WindowsAzureMediaServices';
-    const MEDIA_SERVICES_INPUT_ASSETS_REL = 'http://schemas.microsoft.com/ado/2007/08/dataservices/related/InputMediaAssets';
-    const MEDIA_SERVICES_ASSET_REL = 'http://schemas.microsoft.com/ado/2007/08/dataservices/related/Asset';
-    const MEDIA_SERVICES_ENCRYPTION_VERSION = '1.0';
 
     // @codingStandardsIgnoreEnd
 }

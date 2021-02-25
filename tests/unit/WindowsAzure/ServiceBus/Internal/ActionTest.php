@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\Internal;
+namespace Tests\unit\AzureServiceBus\ServiceBus\Internal;
 
-use WindowsAzure\ServiceBus\Internal\Action;
+use AzureServiceBus\ServiceBus\Internal\Action;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,7 +44,7 @@ use PHPUnit\Framework\TestCase;
 class ActionTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Internal\Action::__construct
+     * @covers \AzureServiceBus\ServiceBus\Internal\Action::__construct
      */
     public function testActionConstructor()
     {

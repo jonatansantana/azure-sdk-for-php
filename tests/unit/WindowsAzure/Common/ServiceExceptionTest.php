@@ -23,9 +23,9 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common;
+namespace Tests\unit\AzureServiceBus\Common;
 
-use WindowsAzure\Common\ServiceException;
+use AzureServiceBus\Common\ServiceException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,7 +44,7 @@ use PHPUnit\Framework\TestCase;
 class ServiceExceptionTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\ServiceException::__construct
+     * @covers \AzureServiceBus\Common\ServiceException::__construct
      */
     public function test__construct()
     {
@@ -63,7 +63,7 @@ class ServiceExceptionTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\ServiceException::getErrorText
+     * @covers \AzureServiceBus\Common\ServiceException::getErrorText
      */
     public function testGetErrorText()
     {
@@ -80,7 +80,7 @@ class ServiceExceptionTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\ServiceException::getErrorReason
+     * @covers \AzureServiceBus\Common\ServiceException::getErrorReason
      */
     public function testGetErrorReason()
     {

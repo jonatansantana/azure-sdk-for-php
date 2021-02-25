@@ -23,14 +23,14 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\Functional\WindowsAzure\ServiceBus;
+namespace Tests\Functional\AzureServiceBus\ServiceBus;
 
 use Tests\Framework\ServiceBusRestProxyTestBase;
-use WindowsAzure\Common\Internal\IServiceFilter;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\ServiceBus\Internal\IWrap;
-use WindowsAzure\ServiceBus\Internal\WrapTokenManager;
-use WindowsAzure\ServiceBus\Internal\WrapAccessTokenResult;
+use AzureServiceBus\Common\Internal\IServiceFilter;
+use AzureServiceBus\Common\Internal\Utilities;
+use AzureServiceBus\ServiceBus\Internal\IWrap;
+use AzureServiceBus\ServiceBus\Internal\WrapTokenManager;
+use AzureServiceBus\ServiceBus\Internal\WrapAccessTokenResult;
 
 class WrapTokenManagerTest extends ServiceBusRestProxyTestBase
 {
@@ -39,7 +39,7 @@ class WrapTokenManagerTest extends ServiceBusRestProxyTestBase
     private $_client;
     const EXPIRES_IN_SEC = 9;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->_contract = new WrapTokenManagerTest_MockWrapRestProxy();

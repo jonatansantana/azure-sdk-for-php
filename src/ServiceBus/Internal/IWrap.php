@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\ServiceBus\Internal;
+namespace AzureServiceBus\ServiceBus\Internal;
 
-use WindowsAzure\Common\Internal\FilterableService;
+use AzureServiceBus\Common\Internal\FilterableService;
 
 /**
  * This class constructs HTTP requests and receive HTTP responses for queue

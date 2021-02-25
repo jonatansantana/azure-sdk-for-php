@@ -23,11 +23,11 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal;
+namespace AzureServiceBus\Common\Internal;
 
-use WindowsAzure\Common\Internal\Http\IHttpClient;
-use WindowsAzure\Common\Models\OAuthAccessToken;
-use WindowsAzure\Common\Internal\Serialization\JsonSerializer;
+use AzureServiceBus\Common\Internal\Http\IHttpClient;
+use AzureServiceBus\Common\Models\OAuthAccessToken;
+use AzureServiceBus\Common\Internal\Serialization\JsonSerializer;
 
 /**
  * OAuth rest proxy.

@@ -23,9 +23,9 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Serialization;
+namespace AzureServiceBus\Common\Internal\Serialization;
 
-use WindowsAzure\Common\Internal\Validate;
+use AzureServiceBus\Common\Internal\Validate;
 
 /**
  * Perform JSON serialization / deserialization.

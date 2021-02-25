@@ -23,12 +23,12 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Http;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Http;
 
-use WindowsAzure\Common\Internal\Http\Url;
+use AzureServiceBus\Common\Internal\Http\Url;
 use Tests\Framework\TestResources;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\InvalidArgumentTypeException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -47,8 +47,8 @@ use PHPUnit\Framework\TestCase;
 class UrlTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::__construct
-     * @covers \WindowsAzure\Common\Internal\Http\Url::_setPathIfEmpty
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::__construct
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::_setPathIfEmpty
      */
     public function test__construct()
     {
@@ -63,46 +63,46 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::__construct
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::__construct
      */
     public function test__constructEmptyUrlFail()
     {
         // Setup
         $urlString = '';
-        $this->setExpectedException(get_class(new \InvalidArgumentException(Resources::INVALID_URL_MSG)));
+        $this->expectException(get_class(new \InvalidArgumentException(Resources::INVALID_URL_MSG)));
 
         // Test
         new Url($urlString);
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::__construct
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::__construct
      */
     public function test__constructNonStringUrlFail()
     {
         // Setup
         $urlString = 1;
-        $this->setExpectedException(get_class(new \InvalidArgumentException(Resources::INVALID_URL_MSG)));
+        $this->expectException(get_class(new \InvalidArgumentException(Resources::INVALID_URL_MSG)));
 
         // Test
         new Url($urlString);
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::__construct
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::__construct
      */
     public function test__constructInvalidUrlFail()
     {
         // Setup
         $urlString = 'ww.invalidurl,com';
-        $this->setExpectedException(get_class(new \InvalidArgumentException(Resources::INVALID_URL_MSG)));
+        $this->expectException(get_class(new \InvalidArgumentException(Resources::INVALID_URL_MSG)));
 
         // Test
         new Url($urlString);
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::__construct
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::__construct
      */
     public function test__constructWithUrlPath()
     {
@@ -116,7 +116,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::getQuery
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::getQuery
      */
     public function testGetQuery()
     {
@@ -133,7 +133,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::getQueryVariables
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::getQueryVariables
      */
     public function testGetQueryVariables()
     {
@@ -150,7 +150,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::setQueryVariable
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::setQueryVariable
      */
     public function testSetQueryVariable()
     {
@@ -167,7 +167,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::setQueryVariable
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::setQueryVariable
      */
     public function testSetQueryVariableInvalidKeyFail()
     {
@@ -176,14 +176,14 @@ class UrlTest extends TestCase
         $invalidKey = new \DateTime();
         $value = 'ValidValue';
         $url = new Url($urlString);
-        $this->setExpectedException(get_class(new InvalidArgumentTypeException(gettype(''))));
+        $this->expectException(get_class(new InvalidArgumentTypeException(gettype(''))));
 
         // Test
         $url->setQueryVariable($invalidKey, $value);
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::setQueryVariable
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::setQueryVariable
      */
     public function testSetQueryVariableEmptyKeyFail()
     {
@@ -192,14 +192,14 @@ class UrlTest extends TestCase
         $invalidKey = new \DateTime();
         $value = 'ValidValue';
         $url = new Url($urlString);
-        $this->setExpectedException(get_class(new \InvalidArgumentException(Resources::NULL_OR_EMPTY_MSG)));
+        $this->expectException(get_class(new \InvalidArgumentException(Resources::NULL_OR_EMPTY_MSG)));
 
         // Test
         $url->setQueryVariable($invalidKey, $value);
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::setQueryVariable
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::setQueryVariable
      */
     public function testSetQueryVariableInvalidValueFail()
     {
@@ -208,14 +208,14 @@ class UrlTest extends TestCase
         $key = 'ValidKey';
         $invalidValue = new \DateTime();
         $url = new Url($urlString);
-        $this->setExpectedException(get_class(new InvalidArgumentTypeException(gettype(''))));
+        $this->expectException(get_class(new InvalidArgumentTypeException(gettype(''))));
 
         // Test
         $url->setQueryVariable($key, $invalidValue);
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::setQueryVariable
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::setQueryVariable
      */
     public function testSetQueryVariableSetEmptyValue()
     {
@@ -233,8 +233,8 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::getUrl
-     * @covers \WindowsAzure\Common\Internal\Http\Url::_setPathIfEmpty
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::getUrl
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::_setPathIfEmpty
      */
     public function testGetUrl()
     {
@@ -250,7 +250,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::setUrlPath
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::setUrlPath
      */
     public function testSetUrlPath()
     {
@@ -267,7 +267,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::appendUrlPath
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::appendUrlPath
      */
     public function testAppendUrlPath()
     {
@@ -285,8 +285,8 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::__toString
-     * @covers \WindowsAzure\Common\Internal\Http\Url::_setPathIfEmpty
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::__toString
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::_setPathIfEmpty
      */
     public function test__toString()
     {
@@ -302,7 +302,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::__clone
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::__clone
      */
     public function test__clone()
     {
@@ -319,7 +319,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\Url::setQueryVariables
+     * @covers \AzureServiceBus\Common\Internal\Http\Url::setQueryVariables
      */
     public function testSetQueryVariables()
     {

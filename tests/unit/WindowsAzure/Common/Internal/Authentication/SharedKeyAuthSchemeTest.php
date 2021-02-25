@@ -23,10 +23,10 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Authentication;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Authentication;
 
-use Tests\mock\WindowsAzure\Common\Internal\Authentication\SharedKeyAuthSchemeMock;
-use WindowsAzure\Common\Internal\Resources;
+use Tests\mock\AzureServiceBus\Common\Internal\Authentication\SharedKeyAuthSchemeMock;
+use AzureServiceBus\Common\Internal\Resources;
 use Tests\framework\TestResources;
 use PHPUnit\Framework\TestCase;
 
@@ -44,7 +44,7 @@ use PHPUnit\Framework\TestCase;
 class SharedKeyAuthSchemeTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\Authentication\SharedKeyAuthScheme::__construct
+     * @covers \AzureServiceBus\Common\Internal\Authentication\SharedKeyAuthScheme::__construct
      */
     public function test__construct()
     {
@@ -67,7 +67,7 @@ class SharedKeyAuthSchemeTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Authentication\SharedKeyAuthScheme::computeSignature
+     * @covers \AzureServiceBus\Common\Internal\Authentication\SharedKeyAuthScheme::computeSignature
      */
     public function testComputeSignatureSimple()
     {
@@ -88,7 +88,7 @@ class SharedKeyAuthSchemeTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Authentication\SharedKeyAuthScheme::getAuthorizationHeader
+     * @covers \AzureServiceBus\Common\Internal\Authentication\SharedKeyAuthScheme::getAuthorizationHeader
      */
     public function testGetAuthorizationHeaderSimple()
     {

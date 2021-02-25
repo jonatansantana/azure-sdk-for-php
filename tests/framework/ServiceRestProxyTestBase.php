@@ -25,8 +25,7 @@
 
 namespace Tests\framework;
 
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Models\ServiceProperties;
+use AzureServiceBus\Common\Internal\Resources;
 
 /**
  * TestBase class for Storage Services test classes.
@@ -44,7 +43,7 @@ use WindowsAzure\Common\Models\ServiceProperties;
 class ServiceRestProxyTestBase extends RestProxyTestBase
 {
     protected $propertiesChanged;
-    protected $defaultProperties;
+    protected $defaultProperties = [];
     protected $connectionString;
 
     const NOT_SUPPORTED = 'The storage emulator doesn\'t support this API';
@@ -70,33 +69,32 @@ class ServiceRestProxyTestBase extends RestProxyTestBase
         return strpos($this->connectionString, Resources::USE_DEVELOPMENT_STORAGE_NAME) !== false;
     }
 
-    public function __construct()
-    {
-        parent::__construct();
-        $this->connectionString = TestResources::getWindowsAzureStorageServicesConnectionString();
-    }
+    // public function __construct()
+    // {
+    //     parent::__construct();
+    //     // $this->connectionString = TestResources::getWindowsAzureStorageServicesConnectionString();
+    // }
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
-        $this->_createDefaultProperties();
+        // $this->_createDefaultProperties();
     }
 
-    private function _createDefaultProperties()
-    {
-        $this->propertiesChanged = false;
-        $propertiesArray = [];
-        $propertiesArray['Logging']['Version'] = '1.0';
-        $propertiesArray['Logging']['Delete'] = 'false';
-        $propertiesArray['Logging']['Read'] = 'false';
-        $propertiesArray['Logging']['Write'] = 'false';
-        $propertiesArray['Logging']['RetentionPolicy']['Enabled'] = 'false';
-        $propertiesArray['Metrics']['Version'] = '1.0';
-        $propertiesArray['Metrics']['Enabled'] = 'false';
-        $propertiesArray['Metrics']['IncludeAPIs'] = 'false';
-        $propertiesArray['Metrics']['RetentionPolicy']['Enabled'] = 'false';
-        $this->defaultProperties = ServiceProperties::create($propertiesArray);
-    }
+    // private function _createDefaultProperties()
+    // {
+    //     $this->propertiesChanged = false;
+    //     $propertiesArray = [];
+    //     $propertiesArray['Logging']['Version'] = '1.0';
+    //     $propertiesArray['Logging']['Delete'] = 'false';
+    //     $propertiesArray['Logging']['Read'] = 'false';
+    //     $propertiesArray['Logging']['Write'] = 'false';
+    //     $propertiesArray['Logging']['RetentionPolicy']['Enabled'] = 'false';
+    //     $propertiesArray['Metrics']['Version'] = '1.0';
+    //     $propertiesArray['Metrics']['Enabled'] = 'false';
+    //     $propertiesArray['Metrics']['IncludeAPIs'] = 'false';
+    //     $propertiesArray['Metrics']['RetentionPolicy']['Enabled'] = 'false';
+    // }
 
     public function setServiceProperties($properties, $options = null)
     {
@@ -104,7 +102,7 @@ class ServiceRestProxyTestBase extends RestProxyTestBase
         $this->propertiesChanged = true;
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         parent::tearDown();
 

@@ -22,12 +22,12 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Http;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Http;
 
 use GuzzleHttp\Psr7\Response;
-use WindowsAzure\Common\Internal\Http\BatchResponse;
-use WindowsAzure\Common\Internal\Http\BatchRequest;
-use WindowsAzure\Common\Internal\Http\HttpCallContext;
+use AzureServiceBus\Common\Internal\Http\BatchResponse;
+use AzureServiceBus\Common\Internal\Http\BatchRequest;
+use AzureServiceBus\Common\Internal\Http\HttpCallContext;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -46,8 +46,8 @@ use PHPUnit\Framework\TestCase;
 class BatchResponseTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\BatchResponse::__construct
-     * @covers \WindowsAzure\Common\Internal\Http\BatchResponse::getResponses
+     * @covers \AzureServiceBus\Common\Internal\Http\BatchResponse::__construct
+     * @covers \AzureServiceBus\Common\Internal\Http\BatchResponse::getResponses
      */
     public function test__construct()
     {
@@ -82,8 +82,8 @@ class BatchResponseTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\BatchResponse::__construct
-     * @covers \WindowsAzure\Common\Internal\Http\BatchResponse::getResponses
+     * @covers \AzureServiceBus\Common\Internal\Http\BatchResponse::__construct
+     * @covers \AzureServiceBus\Common\Internal\Http\BatchResponse::getResponses
      */
     public function test__constructWithRequestSuccess()
     {
@@ -126,8 +126,8 @@ class BatchResponseTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\BatchResponse::__construct
-     * @covers \WindowsAzure\Common\Internal\Http\BatchResponse::getResponses
+     * @covers \AzureServiceBus\Common\Internal\Http\BatchResponse::__construct
+     * @covers \AzureServiceBus\Common\Internal\Http\BatchResponse::getResponses
      */
     public function test__constructWithRequestException()
     {
@@ -161,7 +161,7 @@ class BatchResponseTest extends TestCase
             ['content-type' => ['boundary=batch_956c339e-1ef0-4443-9276-68c12888a3f7']],
             $encodedBody);
 
-        $this->setExpectedException('WindowsAzure\Common\ServiceException');
+        $this->expectException('AzureServiceBus\Common\ServiceException');
 
         // Test
         $batchResp = new BatchResponse($response, $batchReq);

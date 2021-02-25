@@ -23,11 +23,11 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Http;
+namespace AzureServiceBus\Common\Internal\Http;
 
 use function GuzzleHttp\Psr7\parse_response;
-use WindowsAzure\Common\Internal\Validate;
-use WindowsAzure\Common\ServiceException;
+use AzureServiceBus\Common\Internal\Validate;
+use AzureServiceBus\Common\ServiceException;
 use GuzzleHttp\Psr7\Response;
 use Zend\Mime\Message;
 use Zend\Mime\Part;
@@ -80,6 +80,7 @@ class BatchResponse
         /** @var Part[] $allParts */
         $allParts = [];
         $mimeParts = $mimeBody->getParts();
+        echo 'merging mbatch response'.\PHP_EOL;
         foreach ($mimeParts as $mimePart) {
             $partBoundary = self::getBoundary($mimePart->getType());
             $partMessage = Message::createFromMessage($mimePart->getContent(), $partBoundary);
@@ -92,7 +93,7 @@ class BatchResponse
         if ($request != null) {
             Validate::isA(
                 $request,
-                'WindowsAzure\Common\Internal\Http\BatchRequest',
+                'AzureServiceBus\Common\Internal\Http\BatchRequest',
                 'request'
             );
             $requestContexts = $request->getContexts();

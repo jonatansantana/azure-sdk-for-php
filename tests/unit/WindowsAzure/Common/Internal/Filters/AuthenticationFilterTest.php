@@ -23,14 +23,13 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Filters;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Filters;
 
-use WindowsAzure\Common\Internal\Filters\AuthenticationFilter;
-use WindowsAzure\Common\Internal\Http\HttpClient;
-use WindowsAzure\Common\Internal\Http\Url;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Authentication\SharedKeyAuthScheme;
-use WindowsAzure\MediaServices\Authentication\AccessToken;
+use AzureServiceBus\Common\Internal\Filters\AuthenticationFilter;
+use AzureServiceBus\Common\Internal\Http\HttpClient;
+use AzureServiceBus\Common\Internal\Http\Url;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Authentication\SharedKeyAuthScheme;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -48,25 +47,5 @@ use PHPUnit\Framework\TestCase;
  */
 class AuthenticationFilterTest extends TestCase
 {
-    /**
-     * @covers \WindowsAzure\Common\Internal\Filters\AuthenticationFilter::handleRequest
-     * @covers \WindowsAzure\Common\Internal\Filters\AuthenticationFilter::__construct
-     */
-    public function testHandleRequest()
-    {
-        // Setup
-        $channel = new HttpClient();
-        $token = 'testToken';
-        $expiration = new \DateTime('now');
-        $accessToken = new AccessToken($token, $expiration);
-        $tokenProvider = $this->getMock('\WindowsAzure\MediaServices\Authentication\ITokenProvider');
-        $tokenProvider->expects($this->any())->method('getAccessToken')->will($this->returnValue($accessToken));
-        $filter = new AuthenticationFilter($tokenProvider);
 
-        // Test
-        $request = $filter->handleRequest($channel);
-
-        // Assert
-        $this->assertArrayHasKey(strtolower(Resources::AUTHENTICATION), $request->getHeaders());
-    }
 }

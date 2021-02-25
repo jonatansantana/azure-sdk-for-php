@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Atom;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Atom;
 
-use WindowsAzure\Common\Internal\Atom\Category;
+use AzureServiceBus\Common\Internal\Atom\Category;
 
 use PHPUnit\Framework\TestCase;
 
@@ -45,7 +45,7 @@ use PHPUnit\Framework\TestCase;
 class CategoryTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::__construct
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::__construct
      */
     public function testCategoryConstructor()
     {
@@ -59,7 +59,7 @@ class CategoryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::__construct
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::__construct
      */
     public function testCategoryConstructorWithParameterSuccess()
     {
@@ -78,8 +78,8 @@ class CategoryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::getTerm
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::setTerm
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::getTerm
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::setTerm
      */
     public function testCategoryGetSetTerm()
     {
@@ -99,8 +99,8 @@ class CategoryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::getScheme
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::setScheme
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::getScheme
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::setScheme
      */
     public function testCategoryGetSetScheme()
     {
@@ -120,8 +120,8 @@ class CategoryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::getLabel
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::setLabel
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::getLabel
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::setLabel
      */
     public function testCategoryGetSetLabel()
     {
@@ -141,8 +141,8 @@ class CategoryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::getUndefinedContent
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::setUndefinedContent
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::getUndefinedContent
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::setUndefinedContent
      */
     public function testCategoryGetSetUndefinedContent()
     {
@@ -162,7 +162,7 @@ class CategoryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::parseXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::parseXml
      */
     public function testCategoryCreate()
     {
@@ -178,8 +178,8 @@ class CategoryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::parseXml
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::getTerm
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::parseXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::getTerm
      */
     public function testCategoryCreateWithTerm()
     {
@@ -200,8 +200,8 @@ class CategoryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::parseXml
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::getScheme
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::parseXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::getScheme
      */
     public function testCategoryCreateWithScheme()
     {
@@ -222,8 +222,8 @@ class CategoryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::parseXml
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::getLabel
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::parseXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::getLabel
      */
     public function testCategoryCreateWithLabel()
     {
@@ -244,8 +244,8 @@ class CategoryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::parseXml
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::writeXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::parseXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::writeXml
      */
     public function testCategoryWriteEmptyXml()
     {
@@ -267,8 +267,8 @@ class CategoryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::parseXml
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::writeXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::parseXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::writeXml
      */
     public function testCategoryWriteXmlSuccess()
     {
@@ -293,8 +293,8 @@ class CategoryTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::getTerm
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::setTerm
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::getTerm
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::setTerm
      */
     public function testGetSetTerm()
     {
@@ -314,8 +314,8 @@ class CategoryTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::getScheme
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::setScheme
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::getScheme
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::setScheme
      */
     public function testGetSetScheme()
     {
@@ -335,8 +335,8 @@ class CategoryTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::getLabel
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::setLabel
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::getLabel
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::setLabel
      */
     public function testGetSetLabel()
     {
@@ -356,8 +356,8 @@ class CategoryTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::getUndefinedContent
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::setUndefinedContent
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::getUndefinedContent
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::setUndefinedContent
      */
     public function testGetSetUndefinedContent()
     {
@@ -377,7 +377,7 @@ class CategoryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::parseXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::parseXml
      */
     public function testCategoryParseXmlSuccess()
     {
@@ -398,13 +398,13 @@ class CategoryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::parseXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::parseXml
      */
     public function testCategoryParseXmlInvalidParameter()
     {
         // Setup
         $actual = new Category();
-        $this->setExpectedException(get_class(new \InvalidArgumentException()));
+        $this->expectException(get_class(new \InvalidArgumentException()));
 
         // Test
         $actual->parseXml(null);
@@ -413,7 +413,7 @@ class CategoryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Category::writeXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Category::writeXml
      */
     public function testCategoryWriteXmlSuccessAllProperties()
     {

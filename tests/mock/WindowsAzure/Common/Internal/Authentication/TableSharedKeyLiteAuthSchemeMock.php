@@ -23,9 +23,9 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\mock\WindowsAzure\Common\Internal\Authentication;
+namespace Tests\mock\AzureServiceBus\Common\Internal\Authentication;
 
-use WindowsAzure\Common\Internal\Authentication\TableSharedKeyLiteAuthScheme;
+use AzureServiceBus\Common\Internal\Authentication\TableSharedKeyLiteAuthScheme;
 
 /**
  * Mock class to wrap SharedKeyAuthScheme class.

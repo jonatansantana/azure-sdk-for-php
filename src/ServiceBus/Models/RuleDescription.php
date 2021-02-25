@@ -23,10 +23,10 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\ServiceBus\Models;
+namespace AzureServiceBus\ServiceBus\Models;
 
-use WindowsAzure\ServiceBus\Internal\Action;
-use WindowsAzure\ServiceBus\Internal\Filter;
+use AzureServiceBus\ServiceBus\Internal\Action;
+use AzureServiceBus\ServiceBus\Internal\Filter;
 
 /**
  *  The description of the rule.

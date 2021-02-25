@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Models\SqlRuleAction;
+use AzureServiceBus\ServiceBus\Models\SqlRuleAction;
 
 use PHPUnit\Framework\TestCase;
 
@@ -45,7 +45,7 @@ use PHPUnit\Framework\TestCase;
 class SqlRuleActionTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\SqlRuleAction::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\SqlRuleAction::__construct
      */
     public function testSqlRuleActionConstructor()
     {
@@ -59,8 +59,8 @@ class SqlRuleActionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\SqlRuleAction::getSqlExpression
-     * @covers \WindowsAzure\ServiceBus\Models\SqlRuleAction::setSqlExpression
+     * @covers \AzureServiceBus\ServiceBus\Models\SqlRuleAction::getSqlExpression
+     * @covers \AzureServiceBus\ServiceBus\Models\SqlRuleAction::setSqlExpression
      */
     public function testGetSetSqlExpression()
     {

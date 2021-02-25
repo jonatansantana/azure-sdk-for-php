@@ -23,7 +23,7 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\functional\WindowsAzure\ServiceBus;
+namespace Tests\functional\AzureServiceBus\ServiceBus;
 
 use Tests\Framework\ServiceBusRestProxyTestBase;
 

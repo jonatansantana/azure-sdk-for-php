@@ -23,7 +23,7 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Serialization;
+namespace AzureServiceBus\Common\Internal\Serialization;
 
 /**
  * The serialization interface.

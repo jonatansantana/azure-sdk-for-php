@@ -23,11 +23,11 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\ServiceBus\Internal;
+namespace AzureServiceBus\ServiceBus\Internal;
 
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Validate;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Utilities;
+use AzureServiceBus\Common\Internal\Validate;
 
 /**
  * Container to hold wrap access token response object.

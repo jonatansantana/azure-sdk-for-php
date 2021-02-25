@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Models\SqlFilter;
+use AzureServiceBus\ServiceBus\Models\SqlFilter;
 
 use PHPUnit\Framework\TestCase;
 
@@ -45,7 +45,7 @@ use PHPUnit\Framework\TestCase;
 class SqlFilterTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\SqlFilter::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\SqlFilter::__construct
      */
     public function testSqlFilterConstructor()
     {
@@ -59,8 +59,8 @@ class SqlFilterTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\SqlFilter::getSqlExpression
-     * @covers \WindowsAzure\ServiceBus\Models\SqlFilter::setSqlExpression
+     * @covers \AzureServiceBus\ServiceBus\Models\SqlFilter::getSqlExpression
+     * @covers \AzureServiceBus\ServiceBus\Models\SqlFilter::setSqlExpression
      */
     public function testGetSetSqlExpression()
     {
@@ -80,8 +80,8 @@ class SqlFilterTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\SqlFilter::getCompatibilityLevel
-     * @covers \WindowsAzure\ServiceBus\Models\SqlFilter::setCompatibilityLevel
+     * @covers \AzureServiceBus\ServiceBus\Models\SqlFilter::getCompatibilityLevel
+     * @covers \AzureServiceBus\ServiceBus\Models\SqlFilter::setCompatibilityLevel
      */
     public function testGetSetCompatibilityLevel()
     {

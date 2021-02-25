@@ -26,8 +26,8 @@
 namespace Tests\framework;
 
 use Psr\Http\Message\ResponseInterface;
-use WindowsAzure\Common\Internal\Http\IHttpClient;
-use WindowsAzure\Common\Internal\IServiceFilter;
+use AzureServiceBus\Common\Internal\Http\IHttpClient;
+use AzureServiceBus\Common\Internal\IServiceFilter;
 
 class FiddlerFilter implements IServiceFilter
 {

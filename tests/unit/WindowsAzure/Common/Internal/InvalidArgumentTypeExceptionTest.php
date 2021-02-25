@@ -23,9 +23,9 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal;
+namespace Tests\unit\AzureServiceBus\Common\Internal;
 
-use WindowsAzure\Common\Internal\InvalidArgumentTypeException;
+use AzureServiceBus\Common\Internal\InvalidArgumentTypeException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,7 +44,7 @@ use PHPUnit\Framework\TestCase;
 class InvalidArgumentTypeExceptionTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\InvalidArgumentTypeException::__construct
+     * @covers \AzureServiceBus\Common\Internal\InvalidArgumentTypeException::__construct
      */
     public function test__construct()
     {

@@ -23,11 +23,11 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Atom;
+namespace AzureServiceBus\Common\Internal\Atom;
 
 use SimpleXMLElement;
-use WindowsAzure\Common\Internal\Validate;
-use WindowsAzure\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Validate;
+use AzureServiceBus\Common\Internal\Resources;
 
 /**
  * The base class of ATOM library.

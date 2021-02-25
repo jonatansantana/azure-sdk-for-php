@@ -23,7 +23,7 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\ServiceBus\Models;
+namespace AzureServiceBus\ServiceBus\Models;
 
 /**
  * The description of the topic.

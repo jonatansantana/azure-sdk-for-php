@@ -23,11 +23,11 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Filters;
+namespace AzureServiceBus\Common\Internal\Filters;
 
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\IServiceFilter;
-use WindowsAzure\Common\Internal\Http\IHttpClient;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\IServiceFilter;
+use AzureServiceBus\Common\Internal\Http\IHttpClient;
 use Psr\Http\Message\ResponseInterface;
 
 /**

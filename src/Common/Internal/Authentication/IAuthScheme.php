@@ -23,7 +23,7 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Authentication;
+namespace AzureServiceBus\Common\Internal\Authentication;
 
 /**
  * Interface for azure authentication schemes.

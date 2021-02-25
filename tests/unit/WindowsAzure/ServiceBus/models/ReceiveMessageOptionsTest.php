@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Models\ReceiveMessageOptions;
+use AzureServiceBus\ServiceBus\Models\ReceiveMessageOptions;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,7 +44,7 @@ use PHPUnit\Framework\TestCase;
 class ReceiveMessageOptionsTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\ReceiveMessageOptions::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\ReceiveMessageOptions::__construct
      */
     public function testReceiveMessageOptionsConstructor()
     {
@@ -58,8 +58,8 @@ class ReceiveMessageOptionsTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\ReceiveMessageOptions::getTimeout
-     * @covers \WindowsAzure\ServiceBus\Models\ReceiveMessageOptions::setTimeout
+     * @covers \AzureServiceBus\ServiceBus\Models\ReceiveMessageOptions::getTimeout
+     * @covers \AzureServiceBus\ServiceBus\Models\ReceiveMessageOptions::setTimeout
      */
     public function testGetSetTimeout()
     {
@@ -79,8 +79,8 @@ class ReceiveMessageOptionsTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\ReceiveMessageOptions::getReceiveMode
-     * @covers \WindowsAzure\ServiceBus\Models\ReceiveMessageOptions::setReceiveMode
+     * @covers \AzureServiceBus\ServiceBus\Models\ReceiveMessageOptions::getReceiveMode
+     * @covers \AzureServiceBus\ServiceBus\Models\ReceiveMessageOptions::setReceiveMode
      */
     public function testGetSetReceiveMode()
     {

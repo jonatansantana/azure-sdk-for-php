@@ -23,10 +23,10 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Http;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Http;
 
-use WindowsAzure\Common\Internal\Http\HttpCallContext;
-use WindowsAzure\Common\Internal\Http\Url;
+use AzureServiceBus\Common\Internal\Http\HttpCallContext;
+use AzureServiceBus\Common\Internal\Http\Url;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -62,8 +62,8 @@ class HttpCallContextTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::getMethod
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::setMethod
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::getMethod
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::setMethod
      * @depends test__construct
      */
     public function testSetMethod(HttpCallContext $context)
@@ -79,8 +79,8 @@ class HttpCallContextTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::getBody
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::setBody
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::getBody
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::setBody
      * @depends test__construct
      */
     public function testSetBody(HttpCallContext $context)
@@ -96,8 +96,8 @@ class HttpCallContextTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::getPath
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::setPath
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::getPath
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::setPath
      * @depends test__construct
      */
     public function testSetPath(HttpCallContext $context)
@@ -113,8 +113,8 @@ class HttpCallContextTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::getUri
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::setUri
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::getUri
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::setUri
      * @depends test__construct
      */
     public function testSetUri(HttpCallContext $context)
@@ -130,9 +130,9 @@ class HttpCallContextTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::getHeaders
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::setHeaders
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::addHeader
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::getHeaders
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::setHeaders
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::addHeader
      * @depends test__construct
      */
     public function testSetHeaders(HttpCallContext $context)
@@ -148,9 +148,9 @@ class HttpCallContextTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::getQueryParameters
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::setQueryParameters
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::addQueryParameter
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::getQueryParameters
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::setQueryParameters
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::addQueryParameter
      * @depends test__construct
      */
     public function testSetQueryParameters(HttpCallContext $context)
@@ -166,9 +166,9 @@ class HttpCallContextTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::getStatusCodes
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::setStatusCodes
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::addStatusCode
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::getStatusCodes
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::setStatusCodes
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::addStatusCode
      * @depends test__construct
      */
     public function testSetStatusCodes(HttpCallContext $context)
@@ -184,8 +184,8 @@ class HttpCallContextTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::getHeader
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::addHeader
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::getHeader
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::addHeader
      * @depends test__construct
      */
     public function testAddHeader(HttpCallContext $context)
@@ -202,9 +202,9 @@ class HttpCallContextTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::removeHeader
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::getHeaders
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::addHeader
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::removeHeader
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::getHeaders
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::addHeader
      * @depends test__construct
      */
     public function testRemoveHeader(HttpCallContext $context)
@@ -222,7 +222,7 @@ class HttpCallContextTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\HttpCallContext::__toString
+     * @covers \AzureServiceBus\Common\Internal\Http\HttpCallContext::__toString
      * @depends test__construct
      */
     public function test__toString(HttpCallContext $context)

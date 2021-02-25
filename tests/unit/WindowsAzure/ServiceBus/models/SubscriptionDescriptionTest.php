@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Models\SubscriptionDescription;
+use AzureServiceBus\ServiceBus\Models\SubscriptionDescription;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,7 +44,7 @@ use PHPUnit\Framework\TestCase;
 class SubscriptionDescriptionTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::__construct
      */
     public function testSubscriptionDescriptionConstructor()
     {
@@ -58,8 +58,8 @@ class SubscriptionDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::getLockDuration
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::setLockDuration
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::getLockDuration
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::setLockDuration
      */
     public function testGetSetLockDuration()
     {
@@ -79,8 +79,8 @@ class SubscriptionDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::getRequiresSession
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::setRequiresSession
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::getRequiresSession
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::setRequiresSession
      */
     public function testGetSetRequiresSession()
     {
@@ -100,8 +100,8 @@ class SubscriptionDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::getDefaultMessageTimeToLive
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::setDefaultMessageTimeToLive
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::getDefaultMessageTimeToLive
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::setDefaultMessageTimeToLive
      */
     public function testGetSetDefaultMessageTimeToLive()
     {
@@ -121,8 +121,8 @@ class SubscriptionDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::getDeadLetteringOnMessageExpiration
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::setDeadLetteringOnMessageExpiration
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::getDeadLetteringOnMessageExpiration
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::setDeadLetteringOnMessageExpiration
      */
     public function testGetSetDeadLetteringOnMessageExpiration()
     {
@@ -142,8 +142,8 @@ class SubscriptionDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::getDeadLetteringOnFilterEvaluationExceptions
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::setDeadLetteringOnFilterEvaluationExceptions
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::getDeadLetteringOnFilterEvaluationExceptions
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::setDeadLetteringOnFilterEvaluationExceptions
      */
     public function testGetSetDeadLetteringOnFilterEvaluationExceptions()
     {
@@ -163,8 +163,8 @@ class SubscriptionDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::getDefaultRuleDescription
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::setDefaultRuleDescription
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::getDefaultRuleDescription
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::setDefaultRuleDescription
      */
     public function testGetSetDefaultRuleDescription()
     {
@@ -184,8 +184,8 @@ class SubscriptionDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::getMessageCount
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::setMessageCount
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::getMessageCount
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::setMessageCount
      */
     public function testGetSetMessageCount()
     {
@@ -205,8 +205,8 @@ class SubscriptionDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::getMaxDeliveryCount
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::setMaxDeliveryCount
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::getMaxDeliveryCount
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::setMaxDeliveryCount
      */
     public function testGetSetMaxDeliveryCount()
     {
@@ -226,8 +226,8 @@ class SubscriptionDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::getEnableBatchedOperations
-     * @covers \WindowsAzure\ServiceBus\Models\SubscriptionDescription::setEnableBatchedOperations
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::getEnableBatchedOperations
+     * @covers \AzureServiceBus\ServiceBus\Models\SubscriptionDescription::setEnableBatchedOperations
      */
     public function testGetSetEnableBatchedOperations()
     {

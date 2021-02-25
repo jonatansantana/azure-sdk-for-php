@@ -23,11 +23,11 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Internal\Action;
-use WindowsAzure\ServiceBus\Internal\Filter;
-use WindowsAzure\ServiceBus\Models\RuleDescription;
+use AzureServiceBus\ServiceBus\Internal\Action;
+use AzureServiceBus\ServiceBus\Internal\Filter;
+use AzureServiceBus\ServiceBus\Models\RuleDescription;
 
 use PHPUnit\Framework\TestCase;
 
@@ -47,7 +47,7 @@ use PHPUnit\Framework\TestCase;
 class RuleDescriptionTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\RuleDescription::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleDescription::__construct
      */
     public function testRuleDescriptionConstructor()
     {
@@ -61,8 +61,8 @@ class RuleDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\RuleDescription::getFilter
-     * @covers \WindowsAzure\ServiceBus\Models\RuleDescription::setFilter
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleDescription::getFilter
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleDescription::setFilter
      */
     public function testGetSetFilter()
     {
@@ -82,8 +82,8 @@ class RuleDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\RuleDescription::getAction
-     * @covers \WindowsAzure\ServiceBus\Models\RuleDescription::setAction
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleDescription::getAction
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleDescription::setAction
      */
     public function testGetSetAction()
     {
@@ -103,8 +103,8 @@ class RuleDescriptionTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\RuleDescription::getName
-     * @covers \WindowsAzure\ServiceBus\Models\RuleDescription::setName
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleDescription::getName
+     * @covers \AzureServiceBus\ServiceBus\Models\RuleDescription::setName
      */
     public function testGetSetName()
     {

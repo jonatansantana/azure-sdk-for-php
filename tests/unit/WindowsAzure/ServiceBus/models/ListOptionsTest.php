@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Models\ListOptions;
+use AzureServiceBus\ServiceBus\Models\ListOptions;
 
 use PHPUnit\Framework\TestCase;
 
@@ -45,7 +45,7 @@ use PHPUnit\Framework\TestCase;
 class ListOptionsTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\ListOptions::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\ListOptions::__construct
      */
     public function testListOptionsConstructor()
     {
@@ -59,8 +59,8 @@ class ListOptionsTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\ListOptions::getSkip
-     * @covers \WindowsAzure\ServiceBus\Models\ListOptions::setSkip
+     * @covers \AzureServiceBus\ServiceBus\Models\ListOptions::getSkip
+     * @covers \AzureServiceBus\ServiceBus\Models\ListOptions::setSkip
      */
     public function testGetSetSkip()
     {
@@ -80,8 +80,8 @@ class ListOptionsTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\ServiceBus\Models\ListOptions::getTop
-     * @covers \WindowsAzure\ServiceBus\Models\ListOptions::setTop
+     * @covers \AzureServiceBus\ServiceBus\Models\ListOptions::getTop
+     * @covers \AzureServiceBus\ServiceBus\Models\ListOptions::setTop
      */
     public function testGetSetTop()
     {

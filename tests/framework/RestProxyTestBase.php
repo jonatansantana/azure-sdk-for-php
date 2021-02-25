@@ -26,10 +26,10 @@
 namespace Tests\framework;
 
 
-use WindowsAzure\Common\Internal\Logger;
-use WindowsAzure\Common\Internal\Serialization\XmlSerializer;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\ServicesBuilder;
+use AzureServiceBus\Common\Internal\Logger;
+use AzureServiceBus\Common\Internal\Serialization\XmlSerializer;
+use AzureServiceBus\Common\Internal\Utilities;
+use AzureServiceBus\Common\ServicesBuilder;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -51,6 +51,19 @@ class RestProxyTestBase extends TestCase
     protected $xmlSerializer;
     protected $builder;
 
+    public function setUp(): void {
+        $this->xmlSerializer = new XmlSerializer();
+        $this->builder = new ServicesBuilder();
+        Logger::setLogFile('C:\log.txt');
+
+        // Enable PHP asserts
+        assert_options(ASSERT_ACTIVE, 1);
+        assert_options(ASSERT_WARNING, 0);
+        assert_options(ASSERT_QUIET_EVAL, 1);
+        assert_options(ASSERT_CALLBACK, 'Tests\Framework\RestProxyTestBase::assertHandler');
+
+    }
+
     protected function getTestName()
     {
         return sprintf('onesdkphp%04x', Utilities::generateRandomInt(0, 65535));
@@ -64,30 +77,17 @@ class RestProxyTestBase extends TestCase
             Code '$code'\n";
     }
 
-    public function __construct()
-    {
-        $this->xmlSerializer = new XmlSerializer();
-        $this->builder = new ServicesBuilder();
-        Logger::setLogFile('C:\log.txt');
-
-        // Enable PHP asserts
-        assert_options(ASSERT_ACTIVE, 1);
-        assert_options(ASSERT_WARNING, 0);
-        assert_options(ASSERT_QUIET_EVAL, 1);
-        assert_options(ASSERT_CALLBACK, 'Tests\Framework\RestProxyTestBase::assertHandler');
-    }
-
     public function setProxy($serviceRestProxy)
     {
         $this->restProxy = $serviceRestProxy;
     }
 
-    protected function onNotSuccessfulTest(\Exception $e)
+    protected function onNotSuccessfulTest(\Throwable $t): void
     {
-        parent::onNotSuccessfulTest($e);
+        parent::onNotSuccessfulTest($t);
 
         $this->tearDown();
-        throw $e;
+        throw $t;
     }
 
     public function testDummy()

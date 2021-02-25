@@ -23,13 +23,13 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\ServiceBus\Models;
+namespace AzureServiceBus\ServiceBus\Models;
 
-use WindowsAzure\Common\Internal\Atom\Entry;
-use WindowsAzure\Common\Internal\Atom\Content;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Serialization\XmlSerializer;
-use WindowsAzure\Common\Internal\Validate;
+use AzureServiceBus\Common\Internal\Atom\Entry;
+use AzureServiceBus\Common\Internal\Atom\Content;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Serialization\XmlSerializer;
+use AzureServiceBus\Common\Internal\Validate;
 
 /**
  * The description of a topic.

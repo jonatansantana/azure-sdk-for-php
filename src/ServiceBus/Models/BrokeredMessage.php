@@ -23,10 +23,10 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\ServiceBus\Models;
+namespace AzureServiceBus\ServiceBus\Models;
 
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Validate;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Validate;
 
 /**
  * A class representing the brokered message of Windows Azure Service Bus.

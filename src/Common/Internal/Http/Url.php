@@ -23,10 +23,10 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Http;
+namespace AzureServiceBus\Common\Internal\Http;
 
-use WindowsAzure\Common\Internal\Validate;
-use WindowsAzure\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Validate;
+use AzureServiceBus\Common\Internal\Resources;
 
 /**
  * Default IUrl implementation.
@@ -69,7 +69,7 @@ class Url implements IUrl
      */
     public function __construct($url)
     {
-        $errorMessage = Resources::INVALID_URL_MSG;
+        $errorMessage = Resources::INVALID_URL_MSG.'-'.$url;
         Validate::isTrue(filter_var($url, FILTER_VALIDATE_URL), $errorMessage);
 
         $this->_url = new \Net_URL2($url);

@@ -23,14 +23,14 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Atom;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Atom;
 
-use WindowsAzure\Common\Internal\Atom\AtomLink;
-use WindowsAzure\Common\Internal\Atom\Content;
-use WindowsAzure\Common\Internal\Atom\Entry;
-use WindowsAzure\Common\Internal\Atom\Category;
-use WindowsAzure\Common\Internal\Atom\Person;
-use WindowsAzure\Common\Internal\Atom\Source;
+use AzureServiceBus\Common\Internal\Atom\AtomLink;
+use AzureServiceBus\Common\Internal\Atom\Content;
+use AzureServiceBus\Common\Internal\Atom\Entry;
+use AzureServiceBus\Common\Internal\Atom\Category;
+use AzureServiceBus\Common\Internal\Atom\Person;
+use AzureServiceBus\Common\Internal\Atom\Source;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -62,8 +62,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getAuthor
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setAuthor
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getAuthor
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setAuthor
      */
     public function testEntryGetSetAuthor()
     {
@@ -84,8 +84,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getCategory
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setCategory
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getCategory
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setCategory
      */
     public function testEntryGetSetCategory()
     {
@@ -106,8 +106,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getContent
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setContent
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getContent
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setContent
      */
     public function testEntryGetSetContent()
     {
@@ -128,8 +128,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getContributor
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setContributor
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getContributor
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setContributor
      */
     public function testEntryGetSetContributor()
     {
@@ -150,8 +150,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getId
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setId
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getId
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setId
      */
     public function testEntryGetSetId()
     {
@@ -171,8 +171,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getLink
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setLink
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getLink
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setLink
      */
     public function testEntryGetSetLink()
     {
@@ -192,8 +192,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getPublished
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setPublished
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getPublished
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setPublished
      */
     public function testEntryGetSetPublished()
     {
@@ -213,8 +213,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getRights
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setRights
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getRights
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setRights
      */
     public function testEntryGetSetRights()
     {
@@ -234,8 +234,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getSource
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setSource
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getSource
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setSource
      */
     public function testEntryGetSetSource()
     {
@@ -255,8 +255,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getSummary
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setSummary
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getSummary
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setSummary
      */
     public function testEntryGetSetSummary()
     {
@@ -276,8 +276,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getTitle
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setTitle
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getTitle
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setTitle
      */
     public function testEntryGetSetTitle()
     {
@@ -297,8 +297,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getUpdated
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setUpdated
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getUpdated
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setUpdated
      */
     public function testEntryGetSetUpdated()
     {
@@ -318,8 +318,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getExtensionElement
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setExtensionElement
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getExtensionElement
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setExtensionElement
      */
     public function testEntryGetSetExtensionElement()
     {
@@ -339,7 +339,7 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::writeXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::writeXml
      */
     public function testEntryToXml()
     {
@@ -361,8 +361,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getAttributes
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setAttributes
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getAttributes
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setAttributes
      */
     public function testGetSetAttributes()
     {
@@ -383,8 +383,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getAuthor
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setAuthor
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getAuthor
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setAuthor
      */
     public function testGetSetAuthor()
     {
@@ -404,8 +404,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getCategory
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setCategory
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getCategory
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setCategory
      */
     public function testGetSetCategory()
     {
@@ -425,8 +425,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getContent
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setContent
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getContent
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setContent
      */
     public function testGetSetContent()
     {
@@ -446,8 +446,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getContributor
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setContributor
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getContributor
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setContributor
      */
     public function testGetSetContributor()
     {
@@ -467,8 +467,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getId
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setId
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getId
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setId
      */
     public function testGetSetId()
     {
@@ -488,8 +488,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getLink
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setLink
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getLink
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setLink
      */
     public function testGetSetLink()
     {
@@ -509,8 +509,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getPublished
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setPublished
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getPublished
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setPublished
      */
     public function testGetSetPublished()
     {
@@ -530,8 +530,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getRights
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setRights
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getRights
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setRights
      */
     public function testGetSetRights()
     {
@@ -551,8 +551,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getSource
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setSource
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getSource
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setSource
      */
     public function testGetSetSource()
     {
@@ -572,8 +572,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getSummary
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setSummary
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getSummary
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setSummary
      */
     public function testGetSetSummary()
     {
@@ -593,8 +593,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getTitle
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setTitle
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getTitle
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setTitle
      */
     public function testGetSetTitle()
     {
@@ -614,8 +614,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getUpdated
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setUpdated
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getUpdated
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setUpdated
      */
     public function testGetSetUpdated()
     {
@@ -635,8 +635,8 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::getExtensionElement
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::setExtensionElement
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::getExtensionElement
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::setExtensionElement
      */
     public function testGetSetExtensionElement()
     {
@@ -656,7 +656,7 @@ class EntryTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Entry::fromXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Entry::fromXml
      */
     public function testFromXml()
     {

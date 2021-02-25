@@ -23,13 +23,13 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Atom;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Atom;
 
-use WindowsAzure\Common\Internal\Atom\AtomLink;
-use WindowsAzure\Common\Internal\Atom\Source;
-use WindowsAzure\Common\Internal\Atom\Person;
-use WindowsAzure\Common\Internal\Atom\Generator;
-use WindowsAzure\Common\Internal\Atom\Category;
+use AzureServiceBus\Common\Internal\Atom\AtomLink;
+use AzureServiceBus\Common\Internal\Atom\Source;
+use AzureServiceBus\Common\Internal\Atom\Person;
+use AzureServiceBus\Common\Internal\Atom\Generator;
+use AzureServiceBus\Common\Internal\Atom\Category;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -48,7 +48,7 @@ use PHPUnit\Framework\TestCase;
 class SourceTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::__construct
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::__construct
      */
     public function testSourceConstructor()
     {
@@ -62,8 +62,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::getAttributes
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::setAttributes
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::getAttributes
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::setAttributes
      */
     public function testGetSetAttributes()
     {
@@ -84,8 +84,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::getAuthor
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::setAuthor
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::getAuthor
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::setAuthor
      */
     public function testGetSetAuthor()
     {
@@ -105,8 +105,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::getCategory
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::setCategory
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::getCategory
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::setCategory
      */
     public function testGetSetCategory()
     {
@@ -129,8 +129,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::getContributor
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::setContributor
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::getContributor
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::setContributor
      */
     public function testGetSetContributor()
     {
@@ -150,8 +150,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::getGenerator
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::setGenerator
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::getGenerator
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::setGenerator
      */
     public function testGetSetGenerator()
     {
@@ -171,8 +171,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::getIcon
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::setIcon
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::getIcon
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::setIcon
      */
     public function testGetSetIcon()
     {
@@ -192,8 +192,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::getId
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::setId
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::getId
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::setId
      */
     public function testGetSetId()
     {
@@ -213,8 +213,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::getLink
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::setLink
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::getLink
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::setLink
      */
     public function testGetSetLink()
     {
@@ -234,8 +234,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::getLogo
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::setLogo
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::getLogo
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::setLogo
      */
     public function testGetSetLogo()
     {
@@ -255,8 +255,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::getRights
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::setRights
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::getRights
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::setRights
      */
     public function testGetSetRights()
     {
@@ -276,8 +276,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::getSubtitle
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::setSubtitle
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::getSubtitle
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::setSubtitle
      */
     public function testGetSetSubtitle()
     {
@@ -297,8 +297,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::getTitle
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::setTitle
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::getTitle
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::setTitle
      */
     public function testGetSetTitle()
     {
@@ -318,8 +318,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::getUpdated
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::setUpdated
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::getUpdated
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::setUpdated
      */
     public function testGetSetUpdated()
     {
@@ -339,8 +339,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::getExtensionElement
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::setExtensionElement
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::getExtensionElement
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::setExtensionElement
      */
     public function testGetSetExtensionElement()
     {
@@ -360,8 +360,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::writeXml
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::writeInnerXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::writeXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::writeInnerXml
      */
     public function testSourceWriteXmlWorks()
     {
@@ -383,8 +383,8 @@ class SourceTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::writeXml
-     * @covers \WindowsAzure\Common\Internal\Atom\Source::writeInnerXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::writeXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Source::writeInnerXml
      */
     public function testSourceWriteXmlAllPropertiesWorks()
     {

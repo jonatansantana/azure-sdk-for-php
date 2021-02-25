@@ -23,10 +23,10 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\mock\WindowsAzure\Common\Internal\Filters;
+namespace Tests\mock\AzureServiceBus\Common\Internal\Filters;
 
-use WindowsAzure\Common\Internal\Http\IHttpClient;
-use WindowsAzure\Common\Internal\IServiceFilter;
+use AzureServiceBus\Common\Internal\Http\IHttpClient;
+use AzureServiceBus\Common\Internal\IServiceFilter;
 use Psr\Http\Message\ResponseInterface;
 
 /**

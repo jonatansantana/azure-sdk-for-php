@@ -23,15 +23,15 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\Internal;
+namespace Tests\unit\AzureServiceBus\ServiceBus\Internal;
 
-use WindowsAzure\Common\ServicesBuilder;
+use AzureServiceBus\Common\ServicesBuilder;
 use Tests\Framework\TestResources;
 use Tests\Framework\ServiceRestProxyTestBase;
-use WindowsAzure\Common\ServiceException;
+use AzureServiceBus\Common\ServiceException;
 
-use WindowsAzure\ServiceBus\Internal\WrapTokenManager;
-use WindowsAzure\Common\Internal\ServiceBusSettings;
+use AzureServiceBus\ServiceBus\Internal\WrapTokenManager;
+use AzureServiceBus\Common\Internal\ServiceBusSettings;
 
 /**
  * Unit tests for WrapRestProxy class.
@@ -50,7 +50,7 @@ class WrapTokenManagerTest extends ServiceRestProxyTestBase
 {
     private $_wrapRestProxy;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->skipIfEmulated();
 
@@ -65,8 +65,8 @@ class WrapTokenManagerTest extends ServiceRestProxyTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\Internal\WrapTokenManager::__construct
-     * @covers \WindowsAzure\ServiceBus\Internal\WrapTokenManager::getAccessToken
+     * @covers \AzureServiceBus\ServiceBus\Internal\WrapTokenManager::__construct
+     * @covers \AzureServiceBus\ServiceBus\Internal\WrapTokenManager::getAccessToken
      */
     public function testGetAccessTokenSuccess()
     {
@@ -95,12 +95,12 @@ class WrapTokenManagerTest extends ServiceRestProxyTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\Internal\WrapTokenManager::__construct
-     * @covers \WindowsAzure\ServiceBus\Internal\WrapTokenManager::getAccessToken
+     * @covers \AzureServiceBus\ServiceBus\Internal\WrapTokenManager::__construct
+     * @covers \AzureServiceBus\ServiceBus\Internal\WrapTokenManager::getAccessToken
      */
     public function testGetAccessTokenFailedWithInvalidWrapUri()
     {
-        $this->setExpectedException(get_class(
+        $this->expectException(get_class(
             new \InvalidArgumentException(''))
         );
         $settings = ServiceBusSettings::createFromConnectionString(
@@ -123,12 +123,12 @@ class WrapTokenManagerTest extends ServiceRestProxyTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\Internal\WrapTokenManager::__construct
-     * @covers \WindowsAzure\ServiceBus\Internal\WrapTokenManager::getAccessToken
+     * @covers \AzureServiceBus\ServiceBus\Internal\WrapTokenManager::__construct
+     * @covers \AzureServiceBus\ServiceBus\Internal\WrapTokenManager::getAccessToken
      */
     public function testGetAccessTokenFailedWithInvalidUserName()
     {
-        $this->setExpectedException(get_class(
+        $this->expectException(get_class(
             new ServiceException(''))
         );
         $settings = ServiceBusSettings::createFromConnectionString(
@@ -151,12 +151,12 @@ class WrapTokenManagerTest extends ServiceRestProxyTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\Internal\WrapTokenManager::__construct
-     * @covers \WindowsAzure\ServiceBus\Internal\WrapTokenManager::getAccessToken
+     * @covers \AzureServiceBus\ServiceBus\Internal\WrapTokenManager::__construct
+     * @covers \AzureServiceBus\ServiceBus\Internal\WrapTokenManager::getAccessToken
      */
     public function testGetAccessTokenFailedWithInvalidPassword()
     {
-        $this->setExpectedException(get_class(
+        $this->expectException(get_class(
             new ServiceException(''))
         );
         $settings = ServiceBusSettings::createFromConnectionString(

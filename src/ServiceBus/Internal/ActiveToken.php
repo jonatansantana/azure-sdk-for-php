@@ -23,7 +23,7 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\ServiceBus\Internal;
+namespace AzureServiceBus\ServiceBus\Internal;
 
 /**
  * An active WRAP access Token.

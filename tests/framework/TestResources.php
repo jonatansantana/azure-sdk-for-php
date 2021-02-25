@@ -27,8 +27,8 @@ namespace Tests\framework;
 
 use MicrosoftAzure\Storage\Table\Models\EdmType;
 use MicrosoftAzure\Storage\Table\Models\Entity;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Utilities;
+use AzureServiceBus\Common\Internal\Resources;
 
 /**
  * Resources for testing framework.
@@ -64,34 +64,6 @@ class TestResources
     const HEADER2 = 'testheader2';
     const HEADER1_VALUE = 'HeaderValue1';
     const HEADER2_VALUE = 'HeaderValue2';
-
-    // Media services
-    const MEDIA_SERVICES_ASSET_NAME = 'TestAsset';
-    const MEDIA_SERVICES_OUTPUT_ASSET_NAME = 'TestOutputAsset';
-    const MEDIA_SERVICES_ACCESS_POLICY_NAME = 'TestAccessPolicy';
-    const MEDIA_SERVICES_LOCATOR_NAME = 'TestLocator';
-    const MEDIA_SERVICES_JOB_NAME = 'TestJob';
-    const MEDIA_SERVICES_JOB_ID_PREFIX = 'nb:jid:UUID:';
-    const MEDIA_SERVICES_JOB_TEMPLATE_NAME = 'TestJobTemplate';
-    const MEDIA_SERVICES_JOB_TEMPLATE_ID_PREFIX = 'nb:jtid:UUID:';
-    const MEDIA_SERVICES_TASK_CONFIGURATION = 'H.264 HD 720p VBR';
-    const MEDIA_SERVICES_PROCESSOR_NAME = 'Media Encoder Standard';
-    const MEDIA_SERVICES_DECODE_PROCESSOR_NAME = 'Storage Decryption';
-    const MEDIA_SERVICES_PROCESSOR_ID_PREFIX = 'nb:mpid:UUID:';
-    const MEDIA_SERVICES_DUMMY_FILE_NAME = 'simple.avi';
-    const MEDIA_SERVICES_DUMMY_FILE_CONTENT = 'test file content';
-    const MEDIA_SERVICES_DUMMY_FILE_NAME_1 = 'other.avi';
-    const MEDIA_SERVICES_DUMMY_FILE_CONTENT_1 = 'other file content';
-    const MEDIA_SERVICES_ISM_FILE_NAME = 'small.ism';
-    const MEDIA_SERVICES_ISMC_FILE_NAME = 'small.ismc';
-    const MEDIA_SERVICES_STREAM_APPEND = 'Manifest';
-    const MEDIA_SERVICES_INGEST_MANIFEST = 'TestIngestManifest';
-    const MEDIA_SERVICES_INGEST_MANIFEST_ASSET = 'TestIngestManifestAsset';
-    const MEDIA_SERVICES_CONTENT_KEY_AUTHORIZATION_POLICY_NAME = 'TestContentKeyAuthorizationPolicy';
-    const MEDIA_SERVICES_CONTENT_KEY_AUTHORIZATION_OPTIONS_NAME = 'TestContentKeyAuthorizationPolicyOption';
-    const MEDIA_SERVICES_CONTENT_KEY_AUTHORIZATION_POLICY_RESTRICTION_NAME = 'TestContentKeyAuthorizationPolicyRestriction';
-    const MEDIA_SERVICES_ASSET_DELIVERY_POLICY_NAME = 'AssetDeliveryPolicyName';
-    const MEDIA_SERVICES_CHANNEL_NAME = 'PHPSDK-CHANNEL-UNITTEST';
 
     // See https://tools.ietf.org/html/rfc2616
     const STATUS_NOT_MODIFIED = 304;
@@ -196,17 +168,6 @@ class TestResources
         }
 
         return $name;
-    }
-
-    public static function getMediaServicesConnectionParameters()
-    {
-        return [
-            'tenant' => self::getEnvironmentVariable('AZURE_MEDIA_SERVICES_TENANT'),
-            'clientId' => self::getEnvironmentVariable('AZURE_MEDIA_SERVICES_CLIENT_ID'),
-            'clientKey' => self::getEnvironmentVariable('AZURE_MEDIA_SERVICES_CLIENT_KEY'),
-            'restApiEndpoint' => self::getEnvironmentVariable('AZURE_MEDIA_SERVICES_REST_API_ENDPOINT'),
-            'environment' => self::getEnvironmentVariable('AZURE_MEDIA_SERVICES_ENVIRONMENT'),
-        ];
     }
 
     private static function getEnvironmentVariable($name, $required = true)
@@ -523,20 +484,6 @@ class TestResources
         return $entity;
     }
 
-    public static function getTestOAuthAccessToken()
-    {
-        $token = [
-            Resources::OAUTH_ACCESS_TOKEN => 'http%3a%2f%2fschemas.xmlsoap.org%2fws%2f2005%2f05%2fidentity%2fclaims%2fnameidentifier=client_id&http%3a%2f%2fschemas.microsoft.com%2f'
-                .'accesscontrolservice%2f2010%2f07%2fclaims%2fidentityprovider=https%3a%2f%2fwamsprodglobal001acs.accesscontrol.windows.net%2f&Audience=urn%3aWindows'
-                .'AzureMediaServices&ExpiresOn=1326498007&Issuer=https%3a%2f%2f wamsprodglobal001acs.accesscontrol.windows.net%2f&HMACSHA256=hV1WF7sTe%2ffoHqzK%2ftm'
-                .'nwQY22NRPaDytcOOpC9Nv4DA%3d","token_type":"http://schemas.xmlsoap.org/ws/2009/11/swt-token-profile-1.0',
-            Resources::OAUTH_EXPIRES_IN => '3599',
-            Resources::OAUTH_SCOPE => 'urn:WindowsAzureMediaServices',
-        ];
-
-        return $token;
-    }
-
     public static function getSimpleJson()
     {
         $data['dataArray'] = ['test1', 'test2', 'test3'];
@@ -546,16 +493,6 @@ class TestResources
         $data['jsonObject'] = '{"k1":"test1","k2":"test2","k3":"test3"}';
 
         return $data;
-    }
-
-    public static function getMediaServicesTask($outputAssetName)
-    {
-        return '<?xml version="1.0" encoding="utf-8"?><taskBody><inputAsset>JobInputAsset(0)</inputAsset><outputAsset assetCreationOptions="0" assetName="'.$outputAssetName.'">JobOutputAsset(0)</outputAsset></taskBody>';
-    }
-
-    public static function getMediaServicesJobTemplate($taskTemplateId, $outputAssetName)
-    {
-        return '<?xml version="1.0" encoding="utf-8"?><jobTemplate><taskBody taskTemplateId="'.$taskTemplateId.'"><inputAsset>JobInputAsset(0)</inputAsset><outputAsset assetCreationOptions="0" assetName="'.$outputAssetName.'">JobOutputAsset(0)</outputAsset></taskBody></jobTemplate>';
     }
 
     public static function getSmallIsm()

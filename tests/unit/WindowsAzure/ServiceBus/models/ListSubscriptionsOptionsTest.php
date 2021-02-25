@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Models\ListSubscriptionsOptions;
+use AzureServiceBus\ServiceBus\Models\ListSubscriptionsOptions;
 
 use PHPUnit\Framework\TestCase;
 
@@ -45,7 +45,7 @@ use PHPUnit\Framework\TestCase;
 class ListSubscriptionsOptionsTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\ListSubscriptionsOptions::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\ListSubscriptionsOptions::__construct
      */
     public function testListSubscriptionsOptionsConstructor()
     {

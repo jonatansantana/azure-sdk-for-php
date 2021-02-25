@@ -23,19 +23,19 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\functional\WindowsAzure\ServiceBus;
+namespace Tests\functional\AzureServiceBus\ServiceBus;
 
 use Tests\Framework\FiddlerFilter;
 use Tests\Framework\ServiceBusRestProxyTestBase;
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\ServiceBus\Models\ReceiveMessageOptions;
-use WindowsAzure\ServiceBus\Models\QueueInfo;
+use AzureServiceBus\Common\Internal\Utilities;
+use AzureServiceBus\ServiceBus\Models\ReceiveMessageOptions;
+use AzureServiceBus\ServiceBus\Models\QueueInfo;
 
 class IntegrationTestBase extends ServiceBusRestProxyTestBase
 {
     private static $isOneTimeSetup = false;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $fiddlerFilter = new FiddlerFilter();
@@ -47,9 +47,9 @@ class IntegrationTestBase extends ServiceBusRestProxyTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::createQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::deleteQueue
-     * @covers \WindowsAzure\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::createQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::deleteQueue
+     * @covers \AzureServiceBus\ServiceBus\ServiceBusRestProxy::receiveQueueMessage
      */
     private function doOneTimeSetup()
     {

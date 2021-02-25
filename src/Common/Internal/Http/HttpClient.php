@@ -23,14 +23,14 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Http;
+namespace AzureServiceBus\Common\Internal\Http;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Psr7\Request;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\ServiceException;
-use WindowsAzure\Common\Internal\Validate;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\Common\ServiceException;
+use AzureServiceBus\Common\Internal\Validate;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\RequestOptions;
 

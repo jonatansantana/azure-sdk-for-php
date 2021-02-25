@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Models\EmptyRuleAction;
+use AzureServiceBus\ServiceBus\Models\EmptyRuleAction;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,7 +44,7 @@ use PHPUnit\Framework\TestCase;
 class EmptyRuleActionTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\EmptyRuleAction::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\EmptyRuleAction::__construct
      */
     public function testEmptyRuleActionConstructor()
     {

@@ -23,11 +23,11 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Filters;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Filters;
 
-use WindowsAzure\Common\Internal\Filters\HeadersFilter;
-use WindowsAzure\Common\Internal\Http\HttpClient;
-use WindowsAzure\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Filters\HeadersFilter;
+use AzureServiceBus\Common\Internal\Http\HttpClient;
+use AzureServiceBus\Common\Internal\Resources;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -46,8 +46,8 @@ use PHPUnit\Framework\TestCase;
 class HeadersFilterTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\Filters\HeadersFilter::handleRequest
-     * @covers \WindowsAzure\Common\Internal\Filters\HeadersFilter::__construct
+     * @covers \AzureServiceBus\Common\Internal\Filters\HeadersFilter::handleRequest
+     * @covers \AzureServiceBus\Common\Internal\Filters\HeadersFilter::__construct
      */
     public function testHandleRequestEmptyHeaders()
     {
@@ -66,8 +66,8 @@ class HeadersFilterTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Filters\HeadersFilter::handleRequest
-     * @covers \WindowsAzure\Common\Internal\Filters\HeadersFilter::__construct
+     * @covers \AzureServiceBus\Common\Internal\Filters\HeadersFilter::handleRequest
+     * @covers \AzureServiceBus\Common\Internal\Filters\HeadersFilter::__construct
      */
     public function testHandleRequestOneHeader()
     {
@@ -87,8 +87,8 @@ class HeadersFilterTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Filters\HeadersFilter::handleRequest
-     * @covers \WindowsAzure\Common\Internal\Filters\HeadersFilter::__construct
+     * @covers \AzureServiceBus\Common\Internal\Filters\HeadersFilter::handleRequest
+     * @covers \AzureServiceBus\Common\Internal\Filters\HeadersFilter::__construct
      */
     public function testHandleRequestMultipleHeaders()
     {
@@ -111,7 +111,7 @@ class HeadersFilterTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Filters\HeadersFilter::handleResponse
+     * @covers \AzureServiceBus\Common\Internal\Filters\HeadersFilter::handleResponse
      */
     public function testHandleResponse()
     {

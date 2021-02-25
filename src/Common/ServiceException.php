@@ -23,9 +23,9 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common;
+namespace AzureServiceBus\Common;
 
-use WindowsAzure\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Resources;
 
 /**
  * Fires when the response code is incorrect.

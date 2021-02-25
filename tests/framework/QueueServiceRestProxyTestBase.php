@@ -48,7 +48,7 @@ class QueueServiceRestProxyTestBase extends ServiceRestProxyTestBase
      */
     private $queueRestProxy;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->queueRestProxy = $this->builder->createQueueService($this->connectionString);
@@ -78,7 +78,7 @@ class QueueServiceRestProxyTestBase extends ServiceRestProxyTestBase
         }
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         parent::tearDown();
 

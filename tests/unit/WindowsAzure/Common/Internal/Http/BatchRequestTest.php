@@ -22,10 +22,10 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Http;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Http;
 
-use WindowsAzure\Common\Internal\Http\BatchRequest;
-use WindowsAzure\Common\Internal\Http\HttpCallContext;
+use AzureServiceBus\Common\Internal\Http\BatchRequest;
+use AzureServiceBus\Common\Internal\Http\HttpCallContext;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,9 +44,9 @@ use PHPUnit\Framework\TestCase;
 class BatchRequestTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\batchRequest::appendContext
-     * @covers \WindowsAzure\Common\Internal\Http\batchRequest::encode
-     * @covers \WindowsAzure\Common\Internal\Http\batchRequest::getBody
+     * @covers \AzureServiceBus\Common\Internal\Http\batchRequest::appendContext
+     * @covers \AzureServiceBus\Common\Internal\Http\batchRequest::encode
+     * @covers \AzureServiceBus\Common\Internal\Http\batchRequest::getBody
      */
     public function testAppendContext()
     {
@@ -70,7 +70,7 @@ class BatchRequestTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\BatchRequest::getHeaders
+     * @covers \AzureServiceBus\Common\Internal\Http\BatchRequest::getHeaders
      */
     public function testGetHeaders()
     {
@@ -94,7 +94,7 @@ class BatchRequestTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Http\batchRequest::getContexts
+     * @covers \AzureServiceBus\Common\Internal\Http\batchRequest::getContexts
      */
     public function testGetContexts()
     {

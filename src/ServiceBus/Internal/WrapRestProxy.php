@@ -23,11 +23,11 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\ServiceBus\Internal;
+namespace AzureServiceBus\ServiceBus\Internal;
 
-use WindowsAzure\Common\Internal\Http\IHttpClient;
-use WindowsAzure\Common\Internal\ServiceRestProxy;
-use WindowsAzure\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Http\IHttpClient;
+use AzureServiceBus\Common\Internal\ServiceRestProxy;
+use AzureServiceBus\Common\Internal\Resources;
 
 /**
  * The WRAP service layer.

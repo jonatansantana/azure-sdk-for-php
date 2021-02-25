@@ -23,11 +23,11 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal;
+namespace AzureServiceBus\Common\Internal;
 
-use WindowsAzure\Common\Internal\Http\HttpCallContext;
-use WindowsAzure\Common\Internal\Http\IHttpClient;
-use WindowsAzure\Common\Internal\Serialization\ISerializer;
+use AzureServiceBus\Common\Internal\Http\HttpCallContext;
+use AzureServiceBus\Common\Internal\Http\IHttpClient;
+use AzureServiceBus\Common\Internal\Serialization\ISerializer;
 use MicrosoftAzure\Storage\Blob\Models\AccessCondition;
 use Psr\Http\Message\ResponseInterface;
 
@@ -262,6 +262,7 @@ class ServiceRestProxy extends RestProxy
         $this->validateMetadata($metadata);
 
         $metadata = $this->generateMetadataHeaders($metadata);
+        echo 'merging headsers'.\PHP_EOL;
         $headers = array_merge($headers, $metadata);
 
         return $headers;

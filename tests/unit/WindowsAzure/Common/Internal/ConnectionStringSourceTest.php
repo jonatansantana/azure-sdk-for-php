@@ -11,7 +11,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
+ *
  * PHP version 5
  *
  * @category  Microsoft
@@ -23,10 +23,10 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal;
+namespace Tests\unit\AzureServiceBus\Common\Internal;
 
-use WindowsAzure\Common\Internal\ConnectionStringSource;
 use PHPUnit\Framework\TestCase;
+use AzureServiceBus\Common\Internal\ConnectionStringSource;
 
 /**
  * Unit tests for class ConnectionStringSource.
@@ -43,15 +43,15 @@ use PHPUnit\Framework\TestCase;
  */
 class ConnectionStringSourceTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
-        $property = new \ReflectionProperty('WindowsAzure\Common\Internal\ConnectionStringSource', '_isInitialized');
+        $property = new \ReflectionProperty('AzureServiceBus\Common\Internal\ConnectionStringSource', '_isInitialized');
         $property->setAccessible(true);
         $property->setValue(null);
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringSource::environmentSource
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringSource::environmentSource
      */
     public function testEnvironmentSource()
     {
@@ -71,8 +71,8 @@ class ConnectionStringSourceTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringSource::getDefaultSources
-     * @covers \WindowsAzure\Common\Internal\ConnectionStringSource::_init
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringSource::getDefaultSources
+     * @covers \AzureServiceBus\Common\Internal\ConnectionStringSource::_init
      */
     public function testGetDefaultSources()
     {

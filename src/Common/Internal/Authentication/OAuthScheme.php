@@ -23,12 +23,12 @@
  * @link      http://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Authentication;
+namespace AzureServiceBus\Common\Internal\Authentication;
 
-use WindowsAzure\Common\Internal\OAuthRestProxy;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Validate;
-use WindowsAzure\Common\Models\OAuthAccessToken;
+use AzureServiceBus\Common\Internal\OAuthRestProxy;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Validate;
+use AzureServiceBus\Common\Models\OAuthAccessToken;
 
 /**
  * Provides shared key authentication scheme for OAuth.

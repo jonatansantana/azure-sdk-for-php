@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Atom;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Atom;
 
-use WindowsAzure\Common\Internal\Atom\Generator;
+use AzureServiceBus\Common\Internal\Atom\Generator;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,7 +44,7 @@ use PHPUnit\Framework\TestCase;
 class GeneratorTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Generator::__construct
+     * @covers \AzureServiceBus\Common\Internal\Atom\Generator::__construct
      */
     public function testGeneratorConstructor()
     {
@@ -64,8 +64,8 @@ class GeneratorTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Generator::getText
-     * @covers \WindowsAzure\Common\Internal\Atom\Generator::setText
+     * @covers \AzureServiceBus\Common\Internal\Atom\Generator::getText
+     * @covers \AzureServiceBus\Common\Internal\Atom\Generator::setText
      */
     public function testGeneratorGetSetText()
     {
@@ -85,8 +85,8 @@ class GeneratorTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Generator::getUri
-     * @covers \WindowsAzure\Common\Internal\Atom\Generator::setUri
+     * @covers \AzureServiceBus\Common\Internal\Atom\Generator::getUri
+     * @covers \AzureServiceBus\Common\Internal\Atom\Generator::setUri
      */
     public function testGeneratorGetSetUri()
     {
@@ -106,8 +106,8 @@ class GeneratorTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Generator::getVersion
-     * @covers \WindowsAzure\Common\Internal\Atom\Generator::setVersion
+     * @covers \AzureServiceBus\Common\Internal\Atom\Generator::getVersion
+     * @covers \AzureServiceBus\Common\Internal\Atom\Generator::setVersion
      */
     public function testGeneratorGetSetVersion()
     {
@@ -127,8 +127,8 @@ class GeneratorTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Generator::getText
-     * @covers \WindowsAzure\Common\Internal\Atom\Generator::setText
+     * @covers \AzureServiceBus\Common\Internal\Atom\Generator::getText
+     * @covers \AzureServiceBus\Common\Internal\Atom\Generator::setText
      */
     public function testGetSetText()
     {
@@ -148,8 +148,8 @@ class GeneratorTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Generator::getUri
-     * @covers \WindowsAzure\Common\Internal\Atom\Generator::setUri
+     * @covers \AzureServiceBus\Common\Internal\Atom\Generator::getUri
+     * @covers \AzureServiceBus\Common\Internal\Atom\Generator::setUri
      */
     public function testGetSetUri()
     {
@@ -169,8 +169,8 @@ class GeneratorTest extends TestCase
     }
 
     /** 
-     * @covers \WindowsAzure\Common\Internal\Atom\Generator::getVersion
-     * @covers \WindowsAzure\Common\Internal\Atom\Generator::setVersion
+     * @covers \AzureServiceBus\Common\Internal\Atom\Generator::getVersion
+     * @covers \AzureServiceBus\Common\Internal\Atom\Generator::setVersion
      */
     public function testGetSetVersion()
     {

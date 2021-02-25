@@ -23,11 +23,11 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace Tests\functional\WindowsAzure\ServiceBus;
+namespace Tests\functional\AzureServiceBus\ServiceBus;
 
 use Tests\Framework\ServiceBusRestProxyTestBase;
-use Tests\Functional\WindowsAzure\BlobServiceFunctionalTestData;
-use WindowsAzure\ServiceBus\Models\BrokerProperties;
+use Tests\Functional\AzureServiceBus\BlobServiceFunctionalTestData;
+use AzureServiceBus\ServiceBus\Models\BrokerProperties;
 
 class BrokerPropertiesMapperTest extends ServiceBusRestProxyTestBase
 {

@@ -23,14 +23,14 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\Unit\WindowsAzure\ServiceBus\Internal;
+namespace Tests\Unit\AzureServiceBus\ServiceBus\Internal;
 
 use Tests\Framework\TestResources;
 use Tests\Framework\ServiceRestProxyTestBase;
 
-use WindowsAzure\Common\ServicesBuilder;
-use WindowsAzure\Common\Internal\ServiceBusSettings;
-use WindowsAzure\ServiceBus\Internal\IWrap;
+use AzureServiceBus\Common\ServicesBuilder;
+use AzureServiceBus\Common\Internal\ServiceBusSettings;
+use AzureServiceBus\ServiceBus\Internal\IWrap;
 
 /**
  * Unit tests for WrapRestProxy class.
@@ -50,7 +50,7 @@ class WrapRestProxyTest extends ServiceRestProxyTestBase
     /** @var  IWrap */
     private $_wrapRestProxy;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->skipIfEmulated();
 
@@ -65,8 +65,8 @@ class WrapRestProxyTest extends ServiceRestProxyTestBase
     }
 
     /**
-     * @covers \WindowsAzure\ServiceBus\Internal\WrapRestProxy::__construct
-     * @covers \WindowsAzure\ServiceBus\Internal\WrapRestProxy::wrapAccessToken
+     * @covers \AzureServiceBus\ServiceBus\Internal\WrapRestProxy::__construct
+     * @covers \AzureServiceBus\ServiceBus\Internal\WrapRestProxy::wrapAccessToken
      */
     public function testWrapAccessToken()
     {

@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\ServiceBus\models;
+namespace Tests\unit\AzureServiceBus\ServiceBus\models;
 
-use WindowsAzure\ServiceBus\Models\FalseFilter;
+use AzureServiceBus\ServiceBus\Models\FalseFilter;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,7 +44,7 @@ use PHPUnit\Framework\TestCase;
 class FalseFilterTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\ServiceBus\Models\FalseFilter::__construct
+     * @covers \AzureServiceBus\ServiceBus\Models\FalseFilter::__construct
      */
     public function testFalseFilterConstructor()
     {

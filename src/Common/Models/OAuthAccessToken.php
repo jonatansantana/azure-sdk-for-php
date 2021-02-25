@@ -23,9 +23,9 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Models;
+namespace AzureServiceBus\Common\Models;
 
-use WindowsAzure\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Resources;
 
 /**
  * Holds OAuth access token data.

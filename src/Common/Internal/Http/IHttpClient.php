@@ -23,10 +23,10 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Http;
+namespace AzureServiceBus\Common\Internal\Http;
 
 use Psr\Http\Message\ResponseInterface;
-use WindowsAzure\Common\ServiceException;
+use AzureServiceBus\Common\ServiceException;
 
 /**
  * Defines required methods for a HTTP client proxy.

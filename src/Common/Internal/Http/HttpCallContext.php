@@ -23,11 +23,11 @@
  * @link      https://github.com/windowsazure/azure-sdk-for-php
  */
 
-namespace WindowsAzure\Common\Internal\Http;
+namespace AzureServiceBus\Common\Internal\Http;
 
-use WindowsAzure\Common\Internal\Utilities;
-use WindowsAzure\Common\Internal\Resources;
-use WindowsAzure\Common\Internal\Validate;
+use AzureServiceBus\Common\Internal\Utilities;
+use AzureServiceBus\Common\Internal\Resources;
+use AzureServiceBus\Common\Internal\Validate;
 
 /**
  * Holds basic elements for making HTTP call.

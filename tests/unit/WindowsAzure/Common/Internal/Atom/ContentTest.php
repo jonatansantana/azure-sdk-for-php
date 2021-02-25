@@ -23,9 +23,9 @@
  * @link      https://github.com/WindowsAzure/azure-sdk-for-php
  */
 
-namespace Tests\unit\WindowsAzure\Common\Internal\Atom;
+namespace Tests\unit\AzureServiceBus\Common\Internal\Atom;
 
-use WindowsAzure\Common\Internal\Atom\Content;
+use AzureServiceBus\Common\Internal\Atom\Content;
 
 use PHPUnit\Framework\TestCase;
 
@@ -45,7 +45,7 @@ use PHPUnit\Framework\TestCase;
 class ContentTest extends TestCase
 {
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Content::__construct
+     * @covers \AzureServiceBus\Common\Internal\Atom\Content::__construct
      */
     public function testContentConstructor()
     {
@@ -65,8 +65,8 @@ class ContentTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Content::getText
-     * @covers \WindowsAzure\Common\Internal\Atom\Content::setText
+     * @covers \AzureServiceBus\Common\Internal\Atom\Content::getText
+     * @covers \AzureServiceBus\Common\Internal\Atom\Content::setText
      */
     public function testGetSetText()
     {
@@ -86,8 +86,8 @@ class ContentTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Content::getType
-     * @covers \WindowsAzure\Common\Internal\Atom\Content::setType
+     * @covers \AzureServiceBus\Common\Internal\Atom\Content::getType
+     * @covers \AzureServiceBus\Common\Internal\Atom\Content::setType
      */
     public function testGetSetType()
     {
@@ -107,7 +107,7 @@ class ContentTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Content::writeXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Content::writeXml
      */
     public function testWriteXml()
     {
@@ -133,7 +133,7 @@ class ContentTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Content::parseXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Content::parseXml
      */
     public function testParseXmlSuccess()
     {
@@ -153,12 +153,12 @@ class ContentTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Content::parseXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Content::parseXml
      */
     public function testParseXmlInvalidParameter()
     {
         // Setup
-        $this->setExpectedException(get_class(new \InvalidArgumentException()));
+        $this->expectException(get_class(new \InvalidArgumentException()));
         $content = new Content();
 
         // Test
@@ -166,7 +166,7 @@ class ContentTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Content::parseXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Content::parseXml
      */
     public function testWriteXmlSuccess()
     {
@@ -188,7 +188,7 @@ class ContentTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Content::getXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Content::getXml
      */
     public function testGetXml()
     {
@@ -207,7 +207,7 @@ class ContentTest extends TestCase
     }
 
     /**
-     * @covers \WindowsAzure\Common\Internal\Atom\Content::fromXml
+     * @covers \AzureServiceBus\Common\Internal\Atom\Content::fromXml
      */
     public function testFromXml()
     {

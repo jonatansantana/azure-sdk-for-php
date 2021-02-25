@@ -26,11 +26,11 @@
 namespace Tests\framework;
 
 
-use WindowsAzure\ServiceBus\Internal\IServiceBus;
-use WindowsAzure\ServiceBus\Models\QueueInfo;
-use WindowsAzure\ServiceBus\Models\RuleInfo;
-use WindowsAzure\ServiceBus\Models\SubscriptionInfo;
-use WindowsAzure\ServiceBus\Models\TopicInfo;
+use AzureServiceBus\ServiceBus\Internal\IServiceBus;
+use AzureServiceBus\ServiceBus\Models\QueueInfo;
+use AzureServiceBus\ServiceBus\Models\RuleInfo;
+use AzureServiceBus\ServiceBus\Models\SubscriptionInfo;
+use AzureServiceBus\ServiceBus\Models\TopicInfo;
 
 /**
  * TestBase class for each unit test class.
@@ -56,7 +56,7 @@ class ServiceBusRestProxyTestBase extends ServiceRestProxyTestBase
      */
     protected $serviceBusWrapper;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->skipIfEmulated();
         parent::setUp();
@@ -143,7 +143,7 @@ class ServiceBusRestProxyTestBase extends ServiceRestProxyTestBase
         }
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         parent::tearDown();
 
