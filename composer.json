@@ -3,7 +3,6 @@
     "description": "Este é um fork do SDK PHP Azure para o barramento de serviços",
     "keywords": [ "php", "azure", "sdk" ],
     "license": "Apache-2.0",
-    "type": "package",
     "authors": [
         {
             "name": "Azure Service Bus SDK PHP",
